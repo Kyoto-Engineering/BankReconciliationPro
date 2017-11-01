@@ -46,7 +46,7 @@ namespace BankReconciliation.Reports
             //	Table table = default(Table);
             var with1 = reportConInfo;
             with1.ServerName = "tcp:KyotoServer,49172";
-            with1.DatabaseName = "BankReconciliationDB";
+            with1.DatabaseName = "BankReconciliationDB_Pro_ForTest";
             with1.UserID = "sa";
             with1.Password = "SystemAdministrator";
             AllPaymentStatementCrystalReport cr = new AllPaymentStatementCrystalReport();
@@ -74,7 +74,7 @@ namespace BankReconciliation.Reports
             //	Table table = default(Table);
             var with1 = reportConInfo;
             with1.ServerName = "tcp:KyotoServer,49172";
-            with1.DatabaseName = "BankReconciliationDB";
+            with1.DatabaseName = "BankReconciliationDB_Pro_ForTest";
             with1.UserID = "sa";
             with1.Password = "SystemAdministrator";
             AllDepositStatementCrystalReport cr = new AllDepositStatementCrystalReport();
@@ -104,7 +104,7 @@ namespace BankReconciliation.Reports
             //	Table table = default(Table);
             var with1 = reportConInfo;
             with1.ServerName = "tcp:KyotoServer,49172";
-            with1.DatabaseName = "BankReconciliationDB";
+            with1.DatabaseName = "BankReconciliationDB_Pro_ForTest";
             with1.UserID = "sa";
             with1.Password = "SystemAdministrator";
             SummaryOfBalanceCrystalReport cr = new SummaryOfBalanceCrystalReport();
@@ -133,7 +133,7 @@ namespace BankReconciliation.Reports
             //	Table table = default(Table);
             var with1 = reportConInfo;
             with1.ServerName = "tcp:KyotoServer,49172";
-            with1.DatabaseName = "BankReconciliationDB";
+            with1.DatabaseName = "BankReconciliationDB_Pro_ForTest";
             with1.UserID = "sa";
             with1.Password = "SystemAdministrator";
             BenificiaryPaymentStatementCrystalReport cr = new BenificiaryPaymentStatementCrystalReport();
@@ -162,7 +162,7 @@ namespace BankReconciliation.Reports
             //	Table table = default(Table);
             var with1 = reportConInfo;
             with1.ServerName = "tcp:KyotoServer,49172";
-            with1.DatabaseName = "BankReconciliationDB";
+            with1.DatabaseName = "BankReconciliationDB_Pro_ForTest";
             with1.UserID = "sa";
             with1.Password = "SystemAdministrator";
             ParticularsPaymentStatementCrystalReport cr = new ParticularsPaymentStatementCrystalReport();
@@ -218,7 +218,7 @@ namespace BankReconciliation.Reports
             //	Table table = default(Table);
             var with1 = reportConInfo;
             with1.ServerName = "tcp:KyotoServer,49172";
-            with1.DatabaseName = "BankReconciliationDB";
+            with1.DatabaseName = "BankReconciliationDB_Pro_ForTest";
             with1.UserID = "sa";
             with1.Password = "SystemAdministrator";
             SummaryOfBalanceCrystalReport cr = new SummaryOfBalanceCrystalReport();
@@ -248,7 +248,7 @@ namespace BankReconciliation.Reports
             //	Table table = default(Table);
             var with1 = reportConInfo;
             with1.ServerName = "tcp:KyotoServer,49172";
-            with1.DatabaseName = "BankReconciliationDB";
+            with1.DatabaseName = "BankReconciliationDB_Pro_ForTest";
             with1.UserID = "sa";
             with1.Password = "SystemAdministrator";
             AllDepositStatementCrystalReport cr = new AllDepositStatementCrystalReport();
@@ -276,7 +276,7 @@ namespace BankReconciliation.Reports
             ////	Table table = default(Table);
             //var with1 = reportConInfo;
             //with1.ServerName = "tcp:KyotoServer,49172";
-            //with1.DatabaseName = "BankReconciliationDB";
+            //with1.DatabaseName = "BankReconciliationDB_Pro_ForTest";
             //with1.UserID = "sa";
             //with1.Password = "SystemAdministrator";
             //BenificiaryPaymentStatementCrystalReport cr = new BenificiaryPaymentStatementCrystalReport();
@@ -304,7 +304,7 @@ namespace BankReconciliation.Reports
             ////	Table table = default(Table);
             //var with1 = reportConInfo;
             //with1.ServerName = "tcp:KyotoServer,49172";
-            //with1.DatabaseName = "BankReconciliationDB";
+            //with1.DatabaseName = "BankReconciliationDB_Pro_ForTest";
             //with1.UserID = "sa";
             //with1.Password = "SystemAdministrator";
             //ParticularsPaymentStatementCrystalReport cr = new ParticularsPaymentStatementCrystalReport();
@@ -332,7 +332,7 @@ namespace BankReconciliation.Reports
             //	Table table = default(Table);
             var with1 = reportConInfo;
             with1.ServerName = "tcp:KyotoServer,49172";
-            with1.DatabaseName = "BankReconciliationDB";
+            with1.DatabaseName = "BankReconciliationDB_Pro_ForTest";
             with1.UserID = "sa";
             with1.Password = "SystemAdministrator";
             AllPaymentStatementCrystalReport cr = new AllPaymentStatementCrystalReport();
@@ -396,7 +396,7 @@ namespace BankReconciliation.Reports
             //	Table table = default(Table);
             var with1 = reportConInfo;
             with1.ServerName = "tcp:KyotoServer,49172";
-            with1.DatabaseName = "BankReconciliationDB";
+            with1.DatabaseName = "BankReconciliationDB_Pro_ForTest";
             with1.UserID = "sa";
             with1.Password = "SystemAdministrator";
            NewSummrybalance cr = new NewSummrybalance();
@@ -425,7 +425,7 @@ namespace BankReconciliation.Reports
             //	Table table = default(Table);
             var with1 = reportConInfo;
             with1.ServerName = "tcp:KyotoServer,49172";
-            with1.DatabaseName = "BankReconciliationDB";
+            with1.DatabaseName = "BankReconciliationDB_Pro_ForTest";
             with1.UserID = "sa";
             with1.Password = "SystemAdministrator";
             AllTransactionCrystalReport cr = new AllTransactionCrystalReport();

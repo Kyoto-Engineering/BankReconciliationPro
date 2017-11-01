@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,13 +15,36 @@ namespace BankReconciliation.UI
 {
     public partial class MasterPagesForUser : Form
     {
+        SqlConnection con;
+        SqlCommand cmd;
+        SqlDataReader rdr;
+        ConnectionString cs = new ConnectionString();
         public MasterPagesForUser()
         {
             InitializeComponent();
         }
 
+        private void updatelogouttime()
+        {
+            try
+            {
+                con = new SqlConnection(cs.DBConn);
+                con.Open();
+                string upqry = "UPDATE UserLogTable set LogoutDateTime = @date where UserLogId = '" + LoginForm.ulogid + "' ";
+                cmd = new SqlCommand(upqry, con);
+                cmd.Parameters.AddWithValue("@date", DateTime.UtcNow.ToLocalTime());
+                cmd.ExecuteScalar();
+                con.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
         private void logOutButton_Click(object sender, EventArgs e)
         {
+            updatelogouttime();
             this.Hide();
             LoginForm frm=new LoginForm();
              frm.Show();

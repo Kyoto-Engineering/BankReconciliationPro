@@ -34,6 +34,7 @@
             this.depositButton = new System.Windows.Forms.Button();
             this.addNewBankButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.registerButton = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -46,7 +47,6 @@
             this.lblUser3 = new System.Windows.Forms.Label();
             this.lblUser2 = new System.Windows.Forms.Label();
             this.lblUserk = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,6 +106,19 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.PeachPuff;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.ForestGreen;
+            this.button3.Location = new System.Drawing.Point(6, 349);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(113, 63);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "Reconcile Transaction";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.PeachPuff;
@@ -159,13 +172,15 @@
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.Red;
             this.button4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(973, 6);
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button4.Location = new System.Drawing.Point(947, 6);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 31);
+            this.button4.Size = new System.Drawing.Size(92, 43);
             this.button4.TabIndex = 9;
             this.button4.Text = "LogOut";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // textBox1
@@ -235,19 +250,6 @@
             this.lblUserk.TabIndex = 11;
             this.lblUserk.Text = "l";
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.PeachPuff;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.ForestGreen;
-            this.button3.Location = new System.Drawing.Point(6, 349);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 63);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Reconcile Transaction";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
-            // 
             // MainUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,6 +257,7 @@
             this.BackColor = System.Drawing.Color.Olive;
             this.BackgroundImage = global::BankReconciliation.Properties.Resources.Bank_Recounciliation;
             this.ClientSize = new System.Drawing.Size(1051, 625);
+            this.ControlBox = false;
             this.Controls.Add(this.lblUserk);
             this.Controls.Add(this.lblUser2);
             this.Controls.Add(this.lblUser3);

@@ -153,14 +153,15 @@
             // 
             // logOutButton
             // 
+            this.logOutButton.BackColor = System.Drawing.Color.Red;
             this.logOutButton.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logOutButton.ForeColor = System.Drawing.Color.Blue;
-            this.logOutButton.Location = new System.Drawing.Point(984, 12);
+            this.logOutButton.ForeColor = System.Drawing.Color.White;
+            this.logOutButton.Location = new System.Drawing.Point(965, 12);
             this.logOutButton.Name = "logOutButton";
-            this.logOutButton.Size = new System.Drawing.Size(75, 23);
+            this.logOutButton.Size = new System.Drawing.Size(94, 42);
             this.logOutButton.TabIndex = 9;
             this.logOutButton.Text = "LogOut";
-            this.logOutButton.UseVisualStyleBackColor = true;
+            this.logOutButton.UseVisualStyleBackColor = false;
             this.logOutButton.Click += new System.EventHandler(this.logOutButton_Click);
             // 
             // MasterPagesForUser
@@ -170,6 +171,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.BackgroundImage = global::BankReconciliation.Properties.Resources.Bank_Recounciliation;
             this.ClientSize = new System.Drawing.Size(1071, 567);
+            this.ControlBox = false;
             this.Controls.Add(this.button5);
             this.Controls.Add(this.logOutButton);
             this.Controls.Add(this.textBox2);

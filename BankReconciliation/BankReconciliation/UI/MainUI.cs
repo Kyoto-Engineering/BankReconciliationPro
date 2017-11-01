@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,12 @@ namespace BankReconciliation
 {
     public partial class MainUI : Form
     {
+        SqlConnection con;
+        SqlCommand cmd;
+        SqlDataReader rdr;
+        ConnectionString cs = new ConnectionString();
         ToolStripStatusLabel ToolStripStatusLabel4=new ToolStripStatusLabel();
+        //public int logid = LoginForm.ulogid;
         public MainUI()
         {
             InitializeComponent();
@@ -81,12 +87,32 @@ namespace BankReconciliation
             ToolStripStatusLabel4.Text = System.DateTime.Now.ToString();
         }
 
+        private void updatelogouttime()
+        {
+            try
+            {
+                con = new SqlConnection(cs.DBConn);
+                con.Open();
+                string upqry = "UPDATE UserLogTable set LogoutDateTime = @date where UserLogId = '" + LoginForm.ulogid + "' ";
+                cmd = new SqlCommand(upqry, con);
+                cmd.Parameters.AddWithValue("@date", DateTime.UtcNow.ToLocalTime());
+                cmd.ExecuteScalar();
+                con.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
+        }
+
         private void button4_Click(object sender, EventArgs e)
         {
-            
+            updatelogouttime();
             LoginForm frm = new LoginForm();
             this.Dispose();
             frm.Show();
+            
         }
 
         private void registerButton_Click(object sender, EventArgs e)

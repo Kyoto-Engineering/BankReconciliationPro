@@ -21,6 +21,7 @@ namespace BankReconciliation.LoginUI
         ProgressBar ProgressBar1=new ProgressBar();
         ConnectionString cs=new ConnectionString();
         public static int uId2;
+        public static int ulogid;
         public LoginForm()
         {
             InitializeComponent();
@@ -30,6 +31,30 @@ namespace BankReconciliation.LoginUI
         {
 
 
+
+
+        }
+
+        private void insertUserlog()
+        {
+            try
+            {
+                con = new SqlConnection(cs.DBConn);
+                con.Open();
+                string insqry = "INSERT INTO UserLogTable (UserId, LoginDatetime) VALUES (@d1, @d2)" + "SELECT CONVERT(int, SCOPE_IDENTITY())";
+                cmd = new SqlCommand(insqry, con);
+                cmd.Parameters.AddWithValue("@d1", uId2);
+                cmd.Parameters.AddWithValue("@d2", DateTime.UtcNow.ToLocalTime());
+
+
+                ulogid = (int)cmd.ExecuteScalar();
+                con.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            
 
 
         }
@@ -99,20 +124,24 @@ namespace BankReconciliation.LoginUI
 
                     if (txtUserType.Text.Trim() == "Admin")
                     {
+                        insertUserlog();
                         MainUI frm = new MainUI();
                         this.Visible = false;
                         frm.ShowDialog();
+                        
                         this.Visible = true;
                         frm.lblUserk.Text = txt2UserName.Text;
+                        
                     }
                     if (txtUserType.Text.Trim() == "User")
                     {
-                        
+                        insertUserlog();
                        MasterPagesForUser frm=new MasterPagesForUser();
                        this.Visible = false;
                        frm.ShowDialog();
+                        //insertUserlog();
                        this.Visible = true;
-
+                        //insertUserlog();
                     }
                     
                 }

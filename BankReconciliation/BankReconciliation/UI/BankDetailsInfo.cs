@@ -150,7 +150,7 @@ namespace BankReconciliation.UI
             //	Table table = default(Table);
             var with1 = reportConInfo;
             with1.ServerName = "tcp:KyotoServer,49172";
-            with1.DatabaseName = "BankReconciliationDB";
+            with1.DatabaseName = "BankReconciliationDB_Pro_ForTest";
             with1.UserID = "sa";
             with1.Password = "SystemAdministrator";
             BankDetailsInputCrystalReport cr = new BankDetailsInputCrystalReport();
