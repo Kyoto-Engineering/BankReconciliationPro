@@ -114,7 +114,7 @@ namespace BankReconciliation.Reports
             //	Table table = default(Table);
             var with1 = reportConInfo;
             with1.ServerName = "tcp:KyotoServer,49172";
-            with1.DatabaseName = "BankReconciliationDB_Pro_ForTest";
+            with1.DatabaseName = "BankReconciliationDBProNovember";
             with1.UserID = "sa";
             with1.Password = "SystemAdministrator";
             StaetementOfOneAccountCrystalReportAll cr = new StaetementOfOneAccountCrystalReportAll();
@@ -170,7 +170,7 @@ namespace BankReconciliation.Reports
             //	Table table = default(Table);
             var with1 = reportConInfo;
             with1.ServerName = "tcp:KyotoServer,49172";
-            with1.DatabaseName = "BankReconciliationDB_Pro_ForTest";
+            with1.DatabaseName = "BankReconciliationDBProNovember";
             with1.UserID = "sa";
             with1.Password = "SystemAdministrator";
             StaetementOfOneAccountCrystalReportRange cr = new StaetementOfOneAccountCrystalReportRange();
@@ -225,7 +225,7 @@ namespace BankReconciliation.Reports
             //	Table table = default(Table);
             var with1 = reportConInfo;
             with1.ServerName = "tcp:KyotoServer,49172";
-            with1.DatabaseName = "BankReconciliationDB_Pro_ForTest";
+            with1.DatabaseName = "BankReconciliationDBProNovember";
             with1.UserID = "sa";
             with1.Password = "SystemAdministrator";
             StaetementOfOneAccountCrystalReportSingle cr = new StaetementOfOneAccountCrystalReportSingle();

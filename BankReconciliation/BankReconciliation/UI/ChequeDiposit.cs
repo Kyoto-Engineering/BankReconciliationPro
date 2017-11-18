@@ -540,7 +540,7 @@ namespace BankReconciliation
             //	Table table = default(Table);
             var with1 = reportConInfo;
             with1.ServerName = "tcp:KyotoServer,49172";
-            with1.DatabaseName = "BankReconciliationDB_Pro_ForTest";
+            with1.DatabaseName = "BankReconciliationDBProNovember";
             with1.UserID = "sa";
             with1.Password = "SystemAdministrator";
             DepositInputCrystalReportCheque cr = new DepositInputCrystalReportCheque();
@@ -593,7 +593,7 @@ namespace BankReconciliation
             //	Table table = default(Table);
             var with1 = reportConInfo;
             with1.ServerName = "tcp:KyotoServer,49172";
-            with1.DatabaseName = "BankReconciliationDB_Pro_ForTest";
+            with1.DatabaseName = "BankReconciliationDBProNovember";
             with1.UserID = "sa";
             with1.Password = "SystemAdministrator";
             DepositInputCrystalReportOthers cr = new DepositInputCrystalReportOthers();
@@ -646,7 +646,7 @@ namespace BankReconciliation
             //	Table table = default(Table);
             var with1 = reportConInfo;
             with1.ServerName = "tcp:KyotoServer,49172";
-            with1.DatabaseName = "BankReconciliationDB_Pro_ForTest";
+            with1.DatabaseName = "BankReconciliationDBProNovember";
             with1.UserID = "sa";
             with1.Password = "SystemAdministrator";
             DepositInputCrystalReportEFT cr = new DepositInputCrystalReportEFT();

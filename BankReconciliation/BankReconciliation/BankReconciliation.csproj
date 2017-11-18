@@ -321,6 +321,12 @@
       <DependentUpon>WithdrawInputCrystalReportOthers.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UI\Bank_Account_Management_UI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Bank_Account_Management_UI.Designer.cs">
+      <DependentUpon>Bank_Account_Management_UI.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\BankDetailsInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -393,11 +399,23 @@
     <Compile Include="UI\FirstStepDeposit.Designer.cs">
       <DependentUpon>FirstStepDeposit.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\OverDraftFacilities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\OverDraftFacilities.Designer.cs">
+      <DependentUpon>OverDraftFacilities.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\MasterPagesForUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\MasterPagesForUser.Designer.cs">
       <DependentUpon>MasterPagesForUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reconsiled.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reconsiled.Designer.cs">
+      <DependentUpon>Reconsiled.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\TestForm.cs">
       <SubType>Form</SubType>
@@ -410,6 +428,12 @@
     </Compile>
     <Compile Include="UI\TestScopeIdentity.Designer.cs">
       <DependentUpon>TestScopeIdentity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Transaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Transaction.Designer.cs">
+      <DependentUpon>Transaction.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Withdraw.cs">
       <SubType>Form</SubType>
@@ -568,6 +592,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>WithdrawInputCrystalReportOthers.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Bank_Account_Management_UI.resx">
+      <DependentUpon>Bank_Account_Management_UI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\BankDetailsInfo.resx">
       <DependentUpon>BankDetailsInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -604,14 +631,23 @@
     <EmbeddedResource Include="UI\FirstStepDeposit.resx">
       <DependentUpon>FirstStepDeposit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\OverDraftFacilities.resx">
+      <DependentUpon>OverDraftFacilities.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\MasterPagesForUser.resx">
       <DependentUpon>MasterPagesForUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reconsiled.resx">
+      <DependentUpon>Reconsiled.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TestForm.resx">
       <DependentUpon>TestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TestScopeIdentity.resx">
       <DependentUpon>TestScopeIdentity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Transaction.resx">
+      <DependentUpon>Transaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Withdraw.resx">
       <DependentUpon>Withdraw.cs</DependentUpon>
@@ -692,6 +728,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bank_reconcilliation_management_box__g1r_icon.ico" />
+    <None Include="Resources\whiteyglossyrectanglebuttonmd.png" />
   </ItemGroup>
   <ItemGroup>
     <PublishFile Include="CrystalDecisions.CrystalReports.Engine">

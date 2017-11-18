@@ -80,7 +80,7 @@ namespace BankReconciliation.Reports
             //	Table table = default(Table);
             var with1 = reportConInfo;
             with1.ServerName = "tcp:KyotoServer,49172";
-            with1.DatabaseName = "BankReconciliationDB_Pro_ForTest";
+            with1.DatabaseName = "BankReconciliationDBProNovember";
             with1.UserID = "sa";
             with1.Password = "SystemAdministrator";
             BenificiaryPaymentStatementCrystalReport cr = new BenificiaryPaymentStatementCrystalReport();

@@ -34,6 +34,7 @@
             this.depositButton = new System.Windows.Forms.Button();
             this.addNewBankButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.registerButton = new System.Windows.Forms.Button();
@@ -47,6 +48,11 @@
             this.lblUser3 = new System.Windows.Forms.Label();
             this.lblUser2 = new System.Windows.Forms.Label();
             this.lblUserk = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +61,7 @@
             this.button1.BackColor = System.Drawing.Color.LightSalmon;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Fuchsia;
-            this.button1.Location = new System.Drawing.Point(2, 142);
+            this.button1.Location = new System.Drawing.Point(5, 142);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 55);
             this.button1.TabIndex = 2;
@@ -82,7 +88,7 @@
             this.addNewBankButton.BackColor = System.Drawing.Color.Snow;
             this.addNewBankButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addNewBankButton.ForeColor = System.Drawing.Color.Fuchsia;
-            this.addNewBankButton.Location = new System.Drawing.Point(10, 19);
+            this.addNewBankButton.Location = new System.Drawing.Point(6, 19);
             this.addNewBankButton.Name = "addNewBankButton";
             this.addNewBankButton.Size = new System.Drawing.Size(117, 54);
             this.addNewBankButton.TabIndex = 0;
@@ -92,6 +98,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.registerButton);
@@ -100,11 +107,25 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.addNewBankButton);
             this.groupBox1.Controls.Add(this.depositButton);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(905, 120);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(145, 576);
+            this.groupBox1.Size = new System.Drawing.Size(127, 86);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Visible = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Snow;
+            this.button6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button6.Location = new System.Drawing.Point(146, 19);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(117, 54);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "Overdraft Facilities";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // button3
             // 
@@ -185,24 +206,26 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Blue;
+            this.textBox1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.textBox1.Location = new System.Drawing.Point(393, 6);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(354, 32);
+            this.textBox1.Size = new System.Drawing.Size(348, 39);
             this.textBox1.TabIndex = 5;
             this.textBox1.Text = "Bank Account Reconciliation";
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(287, 57);
+            this.textBox2.Location = new System.Drawing.Point(393, 120);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(598, 109);
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(523, 128);
             this.textBox2.TabIndex = 6;
             this.textBox2.Text = resources.GetString("textBox2.Text");
             // 
@@ -250,6 +273,76 @@
             this.lblUserk.TabIndex = 11;
             this.lblUserk.Text = "l";
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Snow;
+            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
+            this.button7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button7.Location = new System.Drawing.Point(79, 120);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(129, 59);
+            this.button7.TabIndex = 12;
+            this.button7.Text = "Bank Account Management";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Snow;
+            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
+            this.button8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button8.Location = new System.Drawing.Point(79, 192);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(129, 59);
+            this.button8.TabIndex = 13;
+            this.button8.Text = "Transactoin";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.Snow;
+            this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
+            this.button9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button9.Location = new System.Drawing.Point(79, 337);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(129, 59);
+            this.button9.TabIndex = 14;
+            this.button9.Text = "Reports and Statements";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Snow;
+            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
+            this.button10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button10.Location = new System.Drawing.Point(79, 266);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(129, 59);
+            this.button10.TabIndex = 15;
+            this.button10.Text = "Reconsile";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.Snow;
+            this.button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button11.BackgroundImage")));
+            this.button11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button11.Location = new System.Drawing.Point(79, 414);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(129, 59);
+            this.button11.TabIndex = 16;
+            this.button11.Text = "About";
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
             // MainUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,6 +351,11 @@
             this.BackgroundImage = global::BankReconciliation.Properties.Resources.Bank_Recounciliation;
             this.ClientSize = new System.Drawing.Size(1051, 625);
             this.ControlBox = false;
+            this.Controls.Add(this.button11);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.lblUserk);
             this.Controls.Add(this.lblUser2);
             this.Controls.Add(this.lblUser3);
@@ -296,6 +394,12 @@
         private System.Windows.Forms.Label lblUser2;
         internal System.Windows.Forms.Label lblUserk;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
 
     }
 }

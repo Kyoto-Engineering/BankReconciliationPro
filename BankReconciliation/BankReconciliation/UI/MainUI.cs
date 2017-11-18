@@ -163,5 +163,54 @@ namespace BankReconciliation
             f2.ShowDialog();
             this.Visible = true;
         }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            OverDraftFacilities ovfui = new OverDraftFacilities();
+            this.Visible = false;
+            ovfui.ShowDialog();
+            this.Visible = true;
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Bank_Account_Management_UI bb = new Bank_Account_Management_UI();
+            this.Visible = false;
+            bb.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Transaction trn = new Transaction();
+            this.Visible = false;
+            trn.ShowDialog();
+            this.Visible = false;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            BankStatements x = new BankStatements();
+            this.Visible = false;
+            x.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            EntryOnBank f2 = new EntryOnBank();
+            this.Visible = false;
+            f2.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            frmAbout frm = new frmAbout();
+            this.Visible = false;
+            frm.ShowDialog();
+            this.Visible = true;
+        }
     }
 }

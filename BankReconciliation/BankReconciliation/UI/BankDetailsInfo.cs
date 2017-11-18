@@ -22,6 +22,8 @@ namespace BankReconciliation.UI
          SqlConnection con;
          SqlCommand cmd;
         ConnectionString cs=new ConnectionString();
+         SqlDataReader rdr;
+        public string bsn;
         public BankDetailsInfo()
         {
 
@@ -150,7 +152,7 @@ namespace BankReconciliation.UI
             //	Table table = default(Table);
             var with1 = reportConInfo;
             with1.ServerName = "tcp:KyotoServer,49172";
-            with1.DatabaseName = "BankReconciliationDB_Pro_ForTest";
+            with1.DatabaseName = "BankReconciliationDBProNovember";
             with1.UserID = "sa";
             with1.Password = "SystemAdministrator";
             BankDetailsInputCrystalReport cr = new BankDetailsInputCrystalReport();
@@ -230,6 +232,94 @@ namespace BankReconciliation.UI
             {
                 createButton_Click(this, new EventArgs());
             }
+        }
+
+        private void txtBankNameCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (txtBankNameCombo.SelectedIndex != -1)
+            {
+                try
+                {
+                    con = new SqlConnection(cs.DBConn);
+                    con.Open();
+                    string qry = "select BankShortName from BankList where BankName = '" + txtBankNameCombo.Text + "'";
+                    cmd = new SqlCommand(qry, con);
+                    rdr = cmd.ExecuteReader();
+                    if (rdr.Read())
+                    {
+                        bankShortNameTextBox.Text = rdr.GetString(0);
+                    }
+                    con.Close();
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show(exception.Message, "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void load_Acc_Type()
+        {
+            try
+            {
+                con = new SqlConnection(cs.DBConn);
+                con.Open();
+                string qr2 = "select AccountTypeName from AccountType ";
+                cmd= new SqlCommand(qr2, con);
+                rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    comboBox1.Items.Add(rdr.GetString(0));
+                }
+                con.Close();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex != -1)
+            {
+                try
+                {
+                    con = new SqlConnection(cs.DBConn);
+                    con.Open();
+                    string qr2 = "select AccountTypeName from AccountType where AccountTypeName = '" + comboBox1.Text + "' ";
+                    cmd = new SqlCommand(qr2, con);
+                    rdr = cmd.ExecuteReader();
+                    if (rdr.Read() == true)
+                    {
+                        typeOfAccountTextBox.Text = rdr.GetString(0);
+                        
+                        //if (typeOfAccountTextBox.Text == "CD")
+                        //{
+                        //    DialogResult res = MessageBox.Show("Is it Overdraft Account","Attention",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+                        //    if (res == DialogResult.Yes)
+                        //    {
+                        //        groupBox2.Visible = true;
+                        //    }
+                        //}
+                        //else
+                        //{
+                        //    groupBox2.Visible = false;
+                        //}
+                    }
+                    con.Close();
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void BankDetailsInfo_Load(object sender, EventArgs e)
+        {
+            load_Acc_Type();
+            groupBox2.Visible = false;
         }
     }
 }
