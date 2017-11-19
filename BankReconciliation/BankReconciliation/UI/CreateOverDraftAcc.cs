@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace BankReconciliation.UI
 {
-    public partial class OverDraftFacilities : Form
+    public partial class CreateOverDraftAcc : Form
     {
-        public OverDraftFacilities()
+        public CreateOverDraftAcc()
         {
             InitializeComponent();
-        }
-
-        private void OverDraftFacilities_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
