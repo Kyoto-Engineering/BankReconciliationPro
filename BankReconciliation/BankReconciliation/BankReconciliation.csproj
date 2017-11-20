@@ -129,6 +129,12 @@
     <Compile Include="DbGateway\ConnectionString.cs" />
     <Compile Include="DbGateway\ConnectionGateway.cs" />
     <Compile Include="Manager\UserManager.cs" />
+    <Compile Include="Reports\HSBCCheque.cs">
+      <DependentUpon>HSBCCheque.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Reports\BankAsiaCheque.cs">
       <DependentUpon>BankAsiaCheque.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -236,6 +242,12 @@
     </Compile>
     <Compile Include="Reports\Particulers.Designer.cs">
       <DependentUpon>Particulers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PositivePayInstruction.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PositivePayInstruction.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\StaetementOfOneAccountCrystalReportAllN.cs">
       <AutoGen>True</AutoGen>
@@ -476,6 +488,10 @@
     <EmbeddedResource Include="LoginUI\UserRegistrationForm.resx">
       <DependentUpon>UserRegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\HSBCCheque.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HSBCCheque.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\BankAsiaCheque.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>BankAsiaCheque.cs</LastGenOutput>
@@ -542,6 +558,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Particulers.resx">
       <DependentUpon>Particulers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PositivePayInstruction.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PositivePayInstruction.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\StaetementOfOneAccountCrystalReportAllN.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
