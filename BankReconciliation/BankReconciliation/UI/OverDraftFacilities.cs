@@ -24,7 +24,19 @@ namespace BankReconciliation.UI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            CreateOverDraftAcc coa = new CreateOverDraftAcc();
+            this.Visible = false;
+            coa.ShowDialog();
+            this.Visible = true;
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            LimitUi Lui = new LimitUi();
+            this.Visible = false;
+            Lui.ShowDialog();
+            this.Visible = true;
         }
     }
 }
