@@ -243,6 +243,12 @@
     <Compile Include="Reports\Particulers.Designer.cs">
       <DependentUpon>Particulers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PositivePayInstructionUnimed.cs">
+      <DependentUpon>PositivePayInstructionUnimed.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Reports\PositivePayInstruction.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -569,6 +575,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Particulers.resx">
       <DependentUpon>Particulers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PositivePayInstructionUnimed.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PositivePayInstructionUnimed.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PositivePayInstruction.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
