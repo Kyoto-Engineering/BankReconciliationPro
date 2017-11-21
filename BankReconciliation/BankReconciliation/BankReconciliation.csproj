@@ -422,6 +422,12 @@
     <Compile Include="UI\FirstStepDeposit.Designer.cs">
       <DependentUpon>FirstStepDeposit.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\LimitUi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LimitUi.Designer.cs">
+      <DependentUpon>LimitUi.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\OverDraftFacilities.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -668,6 +674,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FirstStepDeposit.resx">
       <DependentUpon>FirstStepDeposit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LimitUi.resx">
+      <DependentUpon>LimitUi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\OverDraftFacilities.resx">
       <DependentUpon>OverDraftFacilities.cs</DependentUpon>
