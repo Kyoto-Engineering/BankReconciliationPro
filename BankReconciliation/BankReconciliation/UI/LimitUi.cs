@@ -28,7 +28,7 @@ namespace BankReconciliation.UI
         {
             con = new SqlConnection(cs.DBConn);
             con.Open();
-            string qry = "select BankAccounts.BankName, BankAccounts.BranchName,BankAccounts.AccountNo, BankAccounts.TypeOfAccount, BankAccounts.OD, BankAccounts.Acid from BankAccounts where BankAccounts.OD = 'OD' and BankAccounts.LimitSet is Null";
+            string qry = "select BankAccounts.BankName, BankAccounts.BranchName,BankAccounts.AccountNo, BankAccounts.TypeOfAccount, BankAccounts.OD, BankAccounts.Acid from BankAccounts where BankAccounts.OD = 'OD' and BankAccounts.LimitSet='Not-set'";
             cmd = new SqlCommand(qry, con);
             rdr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
             dataGridView1.Rows.Clear();
@@ -171,7 +171,11 @@ namespace BankReconciliation.UI
 
                     MessageBox.Show("Successful", "Successful",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
-
+                    con.Open();
+                    string up = "Update BankAccounts set AvailableBalance = Balance + '" + decimal.Parse(textBox5.Text) + "' where BankAccounts.AccountNo = '" + textBox3.Text + "'  ";
+                    cmd= new SqlCommand(up, con);
+                    cmd.ExecuteScalar();
+                    con.Close();
                 }
                 catch (Exception exception)
                 {

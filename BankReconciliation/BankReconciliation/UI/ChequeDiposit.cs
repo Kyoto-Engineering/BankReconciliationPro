@@ -23,8 +23,12 @@ namespace BankReconciliation
         ConnectionString cs=new ConnectionString();
         private SqlDataReader rdr;
         public int newRowID;
-        public decimal mydecimal;
+        public decimal mydecimal, availablebl;
         public string submittedBy2, fullName2;
+        public string od;
+        public string limitset;
+        public decimal limitamount;
+
         public ChequeDiposit()
         {
             InitializeComponent();
@@ -41,166 +45,432 @@ namespace BankReconciliation
         }
 
         private void saveButton_Click_1(object sender, EventArgs e)
+        {  
+          
+        con = new SqlConnection(cs.DBConn);
+        con.Open();
+        string qq1 = "select BankAccounts.OD from BankAccounts where AccountNo='" + cmbAccountDNo.Text + "' ";
+        cmd = new SqlCommand(qq1, con);
+        rdr = cmd.ExecuteReader();
+         if (rdr.Read() == true)
         {
-            if (txtBankNameCombo.Text == "")
-            {
-                MessageBox.Show("Please Select Bank name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtBankNameCombo.Focus();
-                return;
-            }
-            if (cmbAccountDNo.Text == "")
-            {
-                MessageBox.Show("Please Type valid Account Number", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                cmbAccountDNo.Focus();
-                return;
-            }
-            if (txtTransactionTypeCombo.Text == "")
-            {
-                MessageBox.Show("Please Select Transection Type", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtTransactionTypeCombo.Focus();
-                return;
-            }
-            //if (chequeFromBankTextBox.Text == "")
-            //{
-            //    MessageBox.Show("Please Enter the Recipient ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    chequeFromBankTextBox.Focus();
-            //    return;
-            //}
-            if (particularsTextBox.Text == "")
-            {
-                MessageBox.Show("Please Enter the Particulars ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                particularsTextBox.Focus();
-                return;
-            }
-            if (creditTextBox.Text == "")
-            {
-                MessageBox.Show("Please Enter Credit Amount", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                creditTextBox.Focus();
-                return;
-            }
-           
-            try
+              od = rdr.GetString(0);
+        }
+          con.Close();
+
+            if (od == "OD")
             {
                 con = new SqlConnection(cs.DBConn);
                 con.Open();
-
-                //string ct = "select AccountNo from Temp_Account2 where AccountNo='" + accountNoTextBox.Text + "'";
-                string ct = "select AccountNo from BankAccounts where AccountNo='" + cmbAccountDNo.Text + "'";
-                cmd = new SqlCommand(ct);
-                cmd.Connection = con;
+                string ssd = "select BankAccounts.LimitSet from BankAccounts where AccountNo='" + cmbAccountDNo.Text + "'  ";
+                cmd = new SqlCommand(ssd, con);
                 rdr = cmd.ExecuteReader();
-
-                if (rdr.Read())
+                if (rdr.Read() == true)
                 {
+                    limitset = rdr.GetString(0);
+                }
+                con.Close();
+
+                if (limitset == "Set")
+
+                {  
                     con = new SqlConnection(cs.DBConn);
                     con.Open();
-                   // string cb2 = "Update Temp_Account2 set Balances=Balances + " + creditTextBox.Text + " where AccountNo='" + accountNoTextBox.Text + "'";
-                    string cb2 = "Update BankAccounts set Balance=Balance + " + decimal.Parse(creditTextBox.Text) + " where AccountNo='" + cmbAccountDNo.Text + "'";
-                    cmd = new SqlCommand(cb2);
-                    cmd.Connection = con;
-                    cmd.ExecuteReader();
-                    con.Close();
-
-                }
-                else
-                {
-                    MessageBox.Show("Please Enter Correct Account Number","Input Error",MessageBoxButtons.OK);
-                    //con = new SqlConnection(cs.DBConn);
-                    //con.Open();
-                    ////string cb1 = "insert into Temp_Account2(AccountNo,Balances) VALUES ('" + accountNoTextBox.Text + "'," + creditTextBox.Text + ")";
-                    //string cb1 = "insert into BankAccounts(AccountNo,BankName,BranchName,Balances) VALUES ('" + accountNoTextBox.Text + "','"+txtBankNameCombo.Text+"'," + creditTextBox.Text + ")";
-                    //cmd = new SqlCommand(cb1);
-                    //cmd.Connection = con;
-
-                    //cmd.ExecuteReader();
-                    //con.Close();
-                }
-                //////
-                SqlConnection myConnection = default(SqlConnection);
-                myConnection = new SqlConnection(cs.DBConn);
-
-                SqlCommand myCommand = default(SqlCommand);
-
-                myCommand = new SqlCommand("SELECT AccountNo,BankName FROM BankAccounts WHERE AccountNo = @accountNo AND BankName = @bankName", myConnection);
-                SqlParameter uName = new SqlParameter("@accountNo", SqlDbType.VarChar);
-                SqlParameter uPassword = new SqlParameter("@bankName", SqlDbType.VarChar);
-                uName.Value = cmbAccountDNo.Text;
-                uPassword.Value = txtBankNameCombo.Text;
-                myCommand.Parameters.Add(uName);
-                myCommand.Parameters.Add(uPassword);
-
-                myCommand.Connection.Open();
-
-                SqlDataReader myReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
-
-                if (myReader.Read() == true)
-                {
-
-                    con = new SqlConnection(cs.DBConn);
-                    con.Open();
-                    string ctk = "select Balance from BankAccounts where AccountNo='" + cmbAccountDNo.Text + "' and BankName='" + txtBankNameCombo.Text + "'";
-                    cmd = new SqlCommand(ctk);
-                    cmd.Connection = con;
+                string q4 = "select LimitTable.LimitAmount from LimitTable where LimitTable.AccountNo = '" + cmbAccountDNo.Text + "'  ";
+                    cmd = new SqlCommand(q4, con);
                     rdr = cmd.ExecuteReader();
-                    if (rdr.Read())
+                    if (rdr.Read() == true)
                     {
-                       // txtBalance.Text = (rdr.GetDouble(0).ToString());
-                        mydecimal = (rdr.GetDecimal(0));
+                        limitamount = rdr.GetDecimal(0);
+                    }
+                    con.Close();
+                    //textBox2.Text = limitamount.ToString();
+                    if (txtBankNameCombo.Text == "")
+                    {
+                        MessageBox.Show("Please Select Bank name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtBankNameCombo.Focus();
+                        return;
+                    }
+                    if (cmbAccountDNo.Text == "")
+                    {
+                        MessageBox.Show("Please Type valid Account Number", "Input Error", MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+                        cmbAccountDNo.Focus();
+                        return;
+                    }
+                    if (txtTransactionTypeCombo.Text == "")
+                    {
+                        MessageBox.Show("Please Select Transection Type", "Error", MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+                        txtTransactionTypeCombo.Focus();
+                        return;
+                    }
+                    //if (chequeFromBankTextBox.Text == "")
+                    //{
+                    //    MessageBox.Show("Please Enter the Recipient ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //    chequeFromBankTextBox.Focus();
+                    //    return;
+                    //}
+                    if (particularsTextBox.Text == "")
+                    {
+                        MessageBox.Show("Please Enter the Particulars ", "Error", MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+                        particularsTextBox.Focus();
+                        return;
+                    }
+                    if (creditTextBox.Text == "")
+                    {
+                        MessageBox.Show("Please Enter Credit Amount", "Error", MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+                        creditTextBox.Focus();
+                        return;
+                    }
+
+                    try
+                    {
+                        con = new SqlConnection(cs.DBConn);
+                        con.Open();
+
+                        //string ct = "select AccountNo from Temp_Account2 where AccountNo='" + accountNoTextBox.Text + "'";
+                        string ct = "select AccountNo from BankAccounts where AccountNo='" + cmbAccountDNo.Text + "'";
+                        cmd = new SqlCommand(ct);
+                        cmd.Connection = con;
+                        rdr = cmd.ExecuteReader();
+
+                        if (rdr.Read())
+                        {
+                            con = new SqlConnection(cs.DBConn);
+                            con.Open();
+                            // string cb2 = "Update Temp_Account2 set Balances=Balances + " + creditTextBox.Text + " where AccountNo='" + accountNoTextBox.Text + "'";
+                            string cb2 = "Update BankAccounts set Balance=Balance + " + decimal.Parse(creditTextBox.Text) + "  where AccountNo='" + cmbAccountDNo.Text + "'";
+                            cmd = new SqlCommand(cb2);
+                            cmd.Connection = con;
+                            cmd.ExecuteReader();
+                            con.Close();
+
+                            con.Open();
+                            string cb3 = "update BankAccounts set AvailableBalance=Balance + " + limitamount + " where AccountNo='" + cmbAccountDNo.Text + "'  ";
+                            cmd= new SqlCommand(cb3, con);
+                            rdr = cmd.ExecuteReader();
+                            con.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please Enter Correct Account Number", "Input Error", MessageBoxButtons.OK);
+                            //con = new SqlConnection(cs.DBConn);
+                            //con.Open();
+                            ////string cb1 = "insert into Temp_Account2(AccountNo,Balances) VALUES ('" + accountNoTextBox.Text + "'," + creditTextBox.Text + ")";
+                            //string cb1 = "insert into BankAccounts(AccountNo,BankName,BranchName,Balances) VALUES ('" + accountNoTextBox.Text + "','"+txtBankNameCombo.Text+"'," + creditTextBox.Text + ")";
+                            //cmd = new SqlCommand(cb1);
+                            //cmd.Connection = con;
+
+                            //cmd.ExecuteReader();
+                            //con.Close();
+                        }
+                        //////
+                        SqlConnection myConnection = default(SqlConnection);
+                        myConnection = new SqlConnection(cs.DBConn);
+
+                        SqlCommand myCommand = default(SqlCommand);
+
+                        myCommand = new SqlCommand(
+                            "SELECT AccountNo,BankName FROM BankAccounts WHERE AccountNo = @accountNo AND BankName = @bankName",
+                            myConnection);
+                        SqlParameter uName = new SqlParameter("@accountNo", SqlDbType.VarChar);
+                        SqlParameter uPassword = new SqlParameter("@bankName", SqlDbType.VarChar);
+                        uName.Value = cmbAccountDNo.Text;
+                        uPassword.Value = txtBankNameCombo.Text;
+                        myCommand.Parameters.Add(uName);
+                        myCommand.Parameters.Add(uPassword);
+
+                        myCommand.Connection.Open();
+
+                        SqlDataReader myReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
+
+                        if (myReader.Read() == true)
+                        {
+
+                            con = new SqlConnection(cs.DBConn);
+                            con.Open();
+                            string ctk = "select Balance from BankAccounts where AccountNo='" + cmbAccountDNo.Text +
+                                         "' and BankName='" + txtBankNameCombo.Text + "'";
+                            cmd = new SqlCommand(ctk);
+                            cmd.Connection = con;
+                            rdr = cmd.ExecuteReader();
+                            if (rdr.Read())
+                            {
+                                // txtBalance.Text = (rdr.GetDouble(0).ToString());
+                                mydecimal = (rdr.GetDecimal(0));
+                            }
+                            con.Close();
+                            con.Open();
+                            string avb = "select AvailableBalance from BankAccounts where AccountNo='" + cmbAccountDNo.Text + "' and BankName='" + txtBankNameCombo.Text + "'";
+                            cmd= new SqlCommand(avb, con);
+                            rdr = cmd.ExecuteReader();
+                            if (rdr.Read())
+                            {
+                                availablebl = rdr.GetDecimal(0);
+                            }
+                            con.Close();
+                        }
+
+                        
+                        /////
+                        con = new SqlConnection(cs.DBConn);
+                        con.Open();
+                        string ctk2 = "Select Name from Registration where UserId='" + submittedBy2 + "'";
+                        cmd = new SqlCommand(ctk2);
+                        cmd.Connection = con;
+                        rdr = cmd.ExecuteReader();
+                        if (rdr.Read())
+                        {
+                            fullName2 = (rdr.GetString(0));
+                        }
+
+                        //auto();
+                        ///
+
+                       // con.Close();
+
+
+                        con = new SqlConnection(cs.DBConn);
+                        con.Open();
+                        // string cb = "insert into Transactions(BankName,AccountNo,TransactionType,Benificiary,Particulars,CheckNo,Credit,CurrentBalance,TransactionDates) VALUES ('" + txtBankNameCombo.Text + "','" + cmbAccountDNo.Text + "','" + txtTransactionTypeCombo.Text + "','" + benificiaryTextBox.Text + "','" + particularsTextBox.Text + "','" + checkNoTextBox.Text + "','" + creditTextBox.Text + "','" + txtBalance.Text + "', @d1)";
+                        string cb = String.Format(
+                            "insert into ODAccountTransaction(BankName,AccountNo,TransactionType,ChequeFromBank,EFTAccountNo,Particulars,CheckNo,Credit,SystemCurrentBalance,SystemTxnDate,Date,SystemAvailableBalance,UserId) VALUES (@bankName,@accountNo,@transactionType,@chequeFromBank,@eftAccountNo,@particulars,@chequeNo,@credit,@currentBalance,@d1,@d2,@sysavailable,@userid)" +
+                            "SELECT CONVERT(int, SCOPE_IDENTITY());");
+                        cmd = new SqlCommand(cb);
+                        cmd.Connection = con;
+                        cmd.Parameters.AddWithValue("@bankName", txtBankNameCombo.Text);
+                        cmd.Parameters.AddWithValue("@accountNo", cmbAccountDNo.Text);
+                        cmd.Parameters.AddWithValue("@transactionType", txtTransactionTypeCombo.Text);
+
+                        cmd.Parameters.AddWithValue("@chequeFromBank", cmbCreditFromBank.Text);
+                        cmd.Parameters.AddWithValue("@eftAccountNo", eftAccountNoTextBox.Text);
+                        cmd.Parameters.AddWithValue("@particulars", particularsTextBox.Text);
+                        cmd.Parameters.AddWithValue("@chequeNo", checkNoTextBox.Text);
+                        cmd.Parameters.AddWithValue("@credit", creditTextBox.Text);
+                        cmd.Parameters.AddWithValue("@currentBalance", mydecimal.ToString());
+                        cmd.Parameters.AddWithValue("@d1", transactionDateTimePicker.Value.ToLocalTime());
+                        cmd.Parameters.AddWithValue("@d2",
+                            Convert.ToDateTime(transactionDateTimePicker.Text,
+                                System.Globalization.CultureInfo.GetCultureInfo("hi-IN").DateTimeFormat));
+
+                        cmd.Parameters.AddWithValue("@sysavailable", availablebl.ToString());
+                        cmd.Parameters.AddWithValue("@userid", LoginForm.uId2);
+                        // cmd.Parameters.AddWithValue();
+                        newRowID = (int) cmd.ExecuteScalar();
+
+                        con.Close();
+                        MessageBox.Show("Successfully Deposited, Your Current Transaction Id is:" + newRowID, "Record",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        saveButton.Enabled = false;
+                        GetData();
+                        Reset();
+                        Condition();
+                        FillBank();
+
+
+
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                /////
-                con=new SqlConnection(cs.DBConn);
-                con.Open();
-                string ctk2 = "Select Name from Registration where UserId='"+submittedBy2+"'";
-                cmd = new SqlCommand(ctk2);
-                cmd.Connection = con;
-                rdr = cmd.ExecuteReader();
-                if (rdr.Read())
+
+                else if (limitset == "Not-set")
                 {
-                    fullName2 = (rdr.GetString(0));
+                    MessageBox.Show("This OD Account does not Have Limit set. Please Set Limit For this Account","Information",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
 
-                //auto();
+            }
+
+                else if (od == "NON-OD")
+                {
+                    if (txtBankNameCombo.Text == "")
+                    {
+                        MessageBox.Show("Please Select Bank name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtBankNameCombo.Focus();
+                        return;
+                    }
+                    if (cmbAccountDNo.Text == "")
+                    {
+                        MessageBox.Show("Please Type valid Account Number", "Input Error", MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+                        cmbAccountDNo.Focus();
+                        return;
+                    }
+                    if (txtTransactionTypeCombo.Text == "")
+                    {
+                        MessageBox.Show("Please Select Transection Type", "Error", MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+                        txtTransactionTypeCombo.Focus();
+                        return;
+                    }
+                    //if (chequeFromBankTextBox.Text == "")
+                    //{
+                    //    MessageBox.Show("Please Enter the Recipient ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //    chequeFromBankTextBox.Focus();
+                    //    return;
+                    //}
+                    if (particularsTextBox.Text == "")
+                    {
+                        MessageBox.Show("Please Enter the Particulars ", "Error", MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+                        particularsTextBox.Focus();
+                        return;
+                    }
+                    if (creditTextBox.Text == "")
+                    {
+                        MessageBox.Show("Please Enter Credit Amount", "Error", MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+                        creditTextBox.Focus();
+                        return;
+                    }
+
+                    try
+                    {
+                        con = new SqlConnection(cs.DBConn);
+                        con.Open();
+
+                        //string ct = "select AccountNo from Temp_Account2 where AccountNo='" + accountNoTextBox.Text + "'";
+                        string ct = "select AccountNo from BankAccounts where AccountNo='" + cmbAccountDNo.Text + "'";
+                        cmd = new SqlCommand(ct);
+                        cmd.Connection = con;
+                        rdr = cmd.ExecuteReader();
+
+                        if (rdr.Read())
+                        {
+                            con = new SqlConnection(cs.DBConn);
+                            con.Open();
+                            // string cb2 = "Update Temp_Account2 set Balances=Balances + " + creditTextBox.Text + " where AccountNo='" + accountNoTextBox.Text + "'";
+                            string cb2 = "Update BankAccounts set Balance=Balance + " +
+                                         decimal.Parse(creditTextBox.Text) +
+                                         " , AvailableBalance = AvailableBalance + " +
+                                         decimal.Parse(creditTextBox.Text) +
+                                         "  where AccountNo='" + cmbAccountDNo.Text + "'";
+                            cmd = new SqlCommand(cb2);
+                            cmd.Connection = con;
+                            cmd.ExecuteReader();
+                            con.Close();
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please Enter Correct Account Number", "Input Error", MessageBoxButtons.OK);
+                            //con = new SqlConnection(cs.DBConn);
+                            //con.Open();
+                            ////string cb1 = "insert into Temp_Account2(AccountNo,Balances) VALUES ('" + accountNoTextBox.Text + "'," + creditTextBox.Text + ")";
+                            //string cb1 = "insert into BankAccounts(AccountNo,BankName,BranchName,Balances) VALUES ('" + accountNoTextBox.Text + "','"+txtBankNameCombo.Text+"'," + creditTextBox.Text + ")";
+                            //cmd = new SqlCommand(cb1);
+                            //cmd.Connection = con;
+
+                            //cmd.ExecuteReader();
+                            //con.Close();
+                        }
+                        //////
+                        SqlConnection myConnection = default(SqlConnection);
+                        myConnection = new SqlConnection(cs.DBConn);
+
+                        SqlCommand myCommand = default(SqlCommand);
+
+                        myCommand = new SqlCommand(
+                            "SELECT AccountNo,BankName FROM BankAccounts WHERE AccountNo = @accountNo AND BankName = @bankName",
+                            myConnection);
+                        SqlParameter uName = new SqlParameter("@accountNo", SqlDbType.VarChar);
+                        SqlParameter uPassword = new SqlParameter("@bankName", SqlDbType.VarChar);
+                        uName.Value = cmbAccountDNo.Text;
+                        uPassword.Value = txtBankNameCombo.Text;
+                        myCommand.Parameters.Add(uName);
+                        myCommand.Parameters.Add(uPassword);
+
+                        myCommand.Connection.Open();
+
+                        SqlDataReader myReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
+
+                        if (myReader.Read() == true)
+                        {
+
+                            con = new SqlConnection(cs.DBConn);
+                            con.Open();
+                            string ctk = "select Balance from BankAccounts where AccountNo='" + cmbAccountDNo.Text +
+                                         "' and BankName='" + txtBankNameCombo.Text + "'";
+                            cmd = new SqlCommand(ctk);
+                            cmd.Connection = con;
+                            rdr = cmd.ExecuteReader();
+                            if (rdr.Read())
+                            {
+                                // txtBalance.Text = (rdr.GetDouble(0).ToString());
+                                mydecimal = (rdr.GetDecimal(0));
+                            }
+                        }
+                        /////
+                        con = new SqlConnection(cs.DBConn);
+                        con.Open();
+                        string ctk2 = "Select Name from Registration where UserId='" + submittedBy2 + "'";
+                        cmd = new SqlCommand(ctk2);
+                        cmd.Connection = con;
+                        rdr = cmd.ExecuteReader();
+                        if (rdr.Read())
+                        {
+                            fullName2 = (rdr.GetString(0));
+                        }
+
+                        //auto();
+                        ///
 
 
 
-                con = new SqlConnection(cs.DBConn);
-                con.Open();
-               // string cb = "insert into Transactions(BankName,AccountNo,TransactionType,Benificiary,Particulars,CheckNo,Credit,CurrentBalance,TransactionDates) VALUES ('" + txtBankNameCombo.Text + "','" + cmbAccountDNo.Text + "','" + txtTransactionTypeCombo.Text + "','" + benificiaryTextBox.Text + "','" + particularsTextBox.Text + "','" + checkNoTextBox.Text + "','" + creditTextBox.Text + "','" + txtBalance.Text + "', @d1)";
-                string cb = String.Format("insert into Transactions(BankName,AccountNo,TransactionType,ChequeFromBank,EFTAccountNo,Particulars,CheckNo,Credit,CurrentBalance,TransactionDates,SubmittedBy,Date) VALUES (@bankName,@accountNo,@transactionType,@chequeFromBank,@eftAccountNo,@particulars,@chequeNo,@credit,@currentBalance,@d1,@submittedBy2,@d2)" + "SELECT CONVERT(int, SCOPE_IDENTITY());");
-                cmd = new SqlCommand(cb);
-                cmd.Connection = con;
-                cmd.Parameters.AddWithValue("@bankName", txtBankNameCombo.Text);
-                cmd.Parameters.AddWithValue("@accountNo", cmbAccountDNo.Text);
-                cmd.Parameters.AddWithValue("@transactionType", txtTransactionTypeCombo.Text);
-                
-                cmd.Parameters.AddWithValue("@chequeFromBank", cmbCreditFromBank.Text);
-                cmd.Parameters.AddWithValue("@eftAccountNo", eftAccountNoTextBox.Text);
-                cmd.Parameters.AddWithValue("@particulars", particularsTextBox.Text);
-                cmd.Parameters.AddWithValue("@chequeNo", checkNoTextBox.Text);
-                cmd.Parameters.AddWithValue("@credit", creditTextBox.Text);
-                cmd.Parameters.AddWithValue("@currentBalance", mydecimal.ToString());
-                cmd.Parameters.AddWithValue("@d1", transactionDateTimePicker.Text);
-                cmd.Parameters.AddWithValue("@submittedBy2", fullName2);
-                cmd.Parameters.AddWithValue("@d2", Convert.ToDateTime(transactionDateTimePicker.Text, System.Globalization.CultureInfo.GetCultureInfo("hi-IN").DateTimeFormat));
-                newRowID = (int)cmd.ExecuteScalar();
-                
-                con.Close();
-                MessageBox.Show("Successfully Deposited, Your Current Transaction Id is:"+newRowID, "Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                saveButton.Enabled = false;
-                GetData();
-                Reset();
-                Condition();
-                FillBank();
+
+                        con = new SqlConnection(cs.DBConn);
+                        con.Open();
+                        // string cb = "insert into Transactions(BankName,AccountNo,TransactionType,Benificiary,Particulars,CheckNo,Credit,CurrentBalance,TransactionDates) VALUES ('" + txtBankNameCombo.Text + "','" + cmbAccountDNo.Text + "','" + txtTransactionTypeCombo.Text + "','" + benificiaryTextBox.Text + "','" + particularsTextBox.Text + "','" + checkNoTextBox.Text + "','" + creditTextBox.Text + "','" + txtBalance.Text + "', @d1)";
+                        string cb = String.Format(
+                            "insert into ODAccountTransaction(BankName,AccountNo,TransactionType,ChequeFromBank,EFTAccountNo,Particulars,CheckNo,Credit,SystemCurrentBalance,SystemTxnDate,Date,SystemAvailableBalance,UserId) VALUES (@bankName,@accountNo,@transactionType,@chequeFromBank,@eftAccountNo,@particulars,@chequeNo,@credit,@currentBalance,@d1,@d2,@sysavailable,@userid)" +
+                            "SELECT CONVERT(int, SCOPE_IDENTITY());");
+                        cmd = new SqlCommand(cb);
+                        cmd.Connection = con;
+                        cmd.Parameters.AddWithValue("@bankName", txtBankNameCombo.Text);
+                        cmd.Parameters.AddWithValue("@accountNo", cmbAccountDNo.Text);
+                        cmd.Parameters.AddWithValue("@transactionType", txtTransactionTypeCombo.Text);
+
+                        cmd.Parameters.AddWithValue("@chequeFromBank", cmbCreditFromBank.Text);
+                        cmd.Parameters.AddWithValue("@eftAccountNo", eftAccountNoTextBox.Text);
+                        cmd.Parameters.AddWithValue("@particulars", particularsTextBox.Text);
+                        cmd.Parameters.AddWithValue("@chequeNo", checkNoTextBox.Text);
+                        cmd.Parameters.AddWithValue("@credit", creditTextBox.Text);
+                        cmd.Parameters.AddWithValue("@currentBalance", mydecimal.ToString());
+                        cmd.Parameters.AddWithValue("@d1", transactionDateTimePicker.Value.ToLocalTime());
+                        cmd.Parameters.AddWithValue("@d2",
+                            Convert.ToDateTime(transactionDateTimePicker.Text,
+                                System.Globalization.CultureInfo.GetCultureInfo("hi-IN").DateTimeFormat));
+
+                        cmd.Parameters.AddWithValue("@sysavailable", mydecimal.ToString());
+                        cmd.Parameters.AddWithValue("@userid", LoginForm.uId2);
+                        // cmd.Parameters.AddWithValue();
+                        newRowID = (int) cmd.ExecuteScalar();
+
+                        con.Close();
+                        MessageBox.Show("Successfully Deposited, Your Current Transaction Id is:" + newRowID, "Record",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        saveButton.Enabled = false;
+                        GetData();
+                        Reset();
+                        Condition();
+                        FillBank();
+
+
+
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             
-              
-                
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

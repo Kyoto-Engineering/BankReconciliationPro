@@ -57,6 +57,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -65,6 +66,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.cmbCreditFromBank);
             this.groupBox1.Controls.Add(this.eftAccountNoTextBox);
             this.groupBox1.Controls.Add(this.label3);
@@ -214,7 +216,7 @@
             this.groupBox3.Controls.Add(this.MRTButton);
             this.groupBox3.Controls.Add(this.nextStepButton);
             this.groupBox3.Controls.Add(this.createButton);
-            this.groupBox3.Location = new System.Drawing.Point(76, 452);
+            this.groupBox3.Location = new System.Drawing.Point(76, 474);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(510, 121);
             this.groupBox3.TabIndex = 47;
@@ -426,6 +428,13 @@
             this.textBox1.TabIndex = 46;
             this.textBox1.Text = "Bank Reconciliation Management";
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(76, 448);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 32);
+            this.textBox2.TabIndex = 50;
+            // 
             // ChequeDiposit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -482,6 +491,7 @@
         private System.Windows.Forms.ComboBox cmbCreditFromBank;
         private System.Windows.Forms.TextBox eftAccountNoTextBox;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox2;
 
     }
 }

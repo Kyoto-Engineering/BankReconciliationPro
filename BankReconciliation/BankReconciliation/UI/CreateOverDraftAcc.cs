@@ -28,7 +28,7 @@ namespace BankReconciliation.UI
         {
             con = new SqlConnection(cs.DBConn);
             con.Open();
-            string qry = "select BankAccounts.BankName, BankAccounts.BranchName,BankAccounts.AccountNo, BankAccounts.TypeOfAccount, BankAccounts.OD, BankAccounts.Acid from BankAccounts where BankAccounts.TypeOfAccount = 'CD' ";
+            string qry = "select BankAccounts.BankName, BankAccounts.BranchName,BankAccounts.AccountNo, BankAccounts.TypeOfAccount, BankAccounts.OD, BankAccounts.Acid from BankAccounts where BankAccounts.TypeOfAccount = 'CD' and BankAccounts.OD = 'NON-OD'  ";
             cmd = new SqlCommand(qry, con);
             rdr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
             dataGridView1.Rows.Clear();
