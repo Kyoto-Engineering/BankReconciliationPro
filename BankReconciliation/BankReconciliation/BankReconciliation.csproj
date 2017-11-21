@@ -255,6 +255,11 @@
       <DependentUpon>StaetementOfOneAccountCrystalReportAllN.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reports\Step1BankReconciliation.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Step1BankReconciliation.rpt</DependentUpon>
+    </Compile>
     <Compile Include="Reports\Summary.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -566,6 +571,10 @@
     <EmbeddedResource Include="Reports\StaetementOfOneAccountCrystalReportAllN.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>StaetementOfOneAccountCrystalReportAllN.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Step1BankReconciliation.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Step1BankReconciliation.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Summary.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
