@@ -243,8 +243,8 @@
     <Compile Include="Reports\Particulers.Designer.cs">
       <DependentUpon>Particulers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\PositivePayInstructionUnimed.cs">
-      <DependentUpon>PositivePayInstructionUnimed.rpt</DependentUpon>
+    <Compile Include="Reports\PositivePayInstructionUnimade.cs">
+      <DependentUpon>PositivePayInstructionUnimade.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
@@ -265,6 +265,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Step1BankReconciliation.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\Summary.cs">
       <AutoGen>True</AutoGen>
@@ -576,9 +577,9 @@
     <EmbeddedResource Include="Reports\Particulers.resx">
       <DependentUpon>Particulers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\PositivePayInstructionUnimed.rpt">
+    <EmbeddedResource Include="Reports\PositivePayInstructionUnimade.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>PositivePayInstructionUnimed.cs</LastGenOutput>
+      <LastGenOutput>PositivePayInstructionUnimade.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PositivePayInstruction.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
