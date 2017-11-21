@@ -243,17 +243,17 @@
     <Compile Include="Reports\Particulers.Designer.cs">
       <DependentUpon>Particulers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PositivePayInstructionReport.cs">
+      <DependentUpon>PositivePayInstructionReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Reports\PositivePayInstructionUnimade.cs">
       <DependentUpon>PositivePayInstructionUnimade.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Reports\PositivePayInstruction.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PositivePayInstruction.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\StaetementOfOneAccountCrystalReportAllN.cs">
       <AutoGen>True</AutoGen>
@@ -577,13 +577,13 @@
     <EmbeddedResource Include="Reports\Particulers.resx">
       <DependentUpon>Particulers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PositivePayInstructionReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PositivePayInstructionReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\PositivePayInstructionUnimade.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PositivePayInstructionUnimade.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\PositivePayInstruction.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>PositivePayInstruction.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\StaetementOfOneAccountCrystalReportAllN.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
