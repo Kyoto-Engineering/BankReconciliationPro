@@ -16,14 +16,14 @@ namespace BankReconciliation.Reports {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class PositivePayInstruction : ReportClass {
+    public class PrimeBankChq : ReportClass {
         
-        public PositivePayInstruction() {
+        public PrimeBankChq() {
         }
         
         public override string ResourceName {
             get {
-                return "PositivePayInstruction.rpt";
+                return "PrimeBankChq.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace BankReconciliation.Reports {
         
         public override string FullResourceName {
             get {
-                return "BankReconciliation.Reports.PositivePayInstruction.rpt";
+                return "BankReconciliation.Reports.PrimeBankChq.rpt";
             }
             set {
                 // Do nothing
@@ -90,7 +90,7 @@ namespace BankReconciliation.Reports {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_ChequeNum {
+        public CrystalDecisions.Shared.IParameterField Parameter_id {
             get {
                 return this.DataDefinition.ParameterFields[0];
             }
@@ -98,9 +98,9 @@ namespace BankReconciliation.Reports {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedPositivePayInstruction : Component, ICachedReport {
+    public class CachedPrimeBankChq : Component, ICachedReport {
         
-        public CachedPositivePayInstruction() {
+        public CachedPrimeBankChq() {
         }
         
         [Browsable(false)]
@@ -137,7 +137,7 @@ namespace BankReconciliation.Reports {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            PositivePayInstruction rpt = new PositivePayInstruction();
+            PrimeBankChq rpt = new PrimeBankChq();
             rpt.Site = this.Site;
             return rpt;
         }
