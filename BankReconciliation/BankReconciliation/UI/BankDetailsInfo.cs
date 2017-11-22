@@ -24,6 +24,8 @@ namespace BankReconciliation.UI
         ConnectionString cs=new ConnectionString();
          SqlDataReader rdr;
         public string bsn;
+        public int bid;
+        private int brid;
         public BankDetailsInfo()
         {
 
@@ -88,6 +90,28 @@ namespace BankReconciliation.UI
                 };
                 bd = aManager.SaveBankdetails(aBankDetails);
                 
+                con = new SqlConnection(cs.DBConn);
+                con.Open();
+                string q45 = "insert into BranchTable(BranchName, RouteNo, BankId) values(@d1, @d2, @d3) " + "SELECT CONVERT(int, SCOPE_IDENTITY())";
+                cmd = new SqlCommand(q45, con);
+                cmd.Parameters.AddWithValue("@d1", branchNameTextBox.Text);
+                cmd.Parameters.AddWithValue("@d2", textBox1.Text);
+                cmd.Parameters.AddWithValue("@d3",bid);
+                 brid = (int) cmd.ExecuteScalar();
+                con.Close();
+
+
+
+                con.Open();
+                string qq1 = "insert into Generate (AccountNo, BankName, BankShortName, AccountTypeName, BranchId, Acid) values (@d1,@d2,@d3,@d4,@d5,@d6)";
+                cmd =  new SqlCommand(qq1,con);
+                cmd.Parameters.AddWithValue("@d1", accountNoTextBox.Text);
+                cmd.Parameters.AddWithValue("@d2", txtBankNameCombo.Text);
+                cmd.Parameters.AddWithValue("@d3", bankShortNameTextBox.Text);
+
+
+
+
                
                 MessageBox.Show("An Account Successfully Created", "Message from Database", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //SaveTempAccount();
@@ -242,12 +266,13 @@ namespace BankReconciliation.UI
                 {
                     con = new SqlConnection(cs.DBConn);
                     con.Open();
-                    string qry = "select BankShortName from BankList where BankName = '" + txtBankNameCombo.Text + "'";
+                    string qry = "select BankId, BankShortName from BankList where BankName = '" + txtBankNameCombo.Text + "'";
                     cmd = new SqlCommand(qry, con);
                     rdr = cmd.ExecuteReader();
                     if (rdr.Read())
                     {
-                        bankShortNameTextBox.Text = rdr.GetString(0);
+                        bid = rdr.GetInt32(0);
+                        bankShortNameTextBox.Text = rdr.GetString(1);
                     }
                     con.Close();
                 }
