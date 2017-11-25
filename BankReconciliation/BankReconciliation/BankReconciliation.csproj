@@ -453,11 +453,11 @@
     <Compile Include="UI\Reconsiled.Designer.cs">
       <DependentUpon>Reconsiled.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Step1Reconciliation .cs">
+    <Compile Include="UI\Step1Reconciliation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Step1Reconciliation .Designer.cs">
-      <DependentUpon>Step1Reconciliation .cs</DependentUpon>
+    <Compile Include="UI\Step1Reconciliation.Designer.cs">
+      <DependentUpon>Step1Reconciliation.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\TestForm.cs">
       <SubType>Form</SubType>
@@ -704,8 +704,8 @@
     <EmbeddedResource Include="UI\Reconsiled.resx">
       <DependentUpon>Reconsiled.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Step1Reconciliation .resx">
-      <DependentUpon>Step1Reconciliation .cs</DependentUpon>
+    <EmbeddedResource Include="UI\Step1Reconciliation.resx">
+      <DependentUpon>Step1Reconciliation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TestForm.resx">
       <DependentUpon>TestForm.cs</DependentUpon>
