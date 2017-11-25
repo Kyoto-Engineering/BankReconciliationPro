@@ -106,7 +106,7 @@
             this.groupNamelabel.AutoSize = true;
             this.groupNamelabel.Font = new System.Drawing.Font("Times New Roman", 25F, System.Drawing.FontStyle.Bold);
             this.groupNamelabel.ForeColor = System.Drawing.Color.Black;
-            this.groupNamelabel.Location = new System.Drawing.Point(424, 9);
+            this.groupNamelabel.Location = new System.Drawing.Point(19, 9);
             this.groupNamelabel.Name = "groupNamelabel";
             this.groupNamelabel.Size = new System.Drawing.Size(331, 38);
             this.groupNamelabel.TabIndex = 9;
@@ -307,7 +307,7 @@
             this.BankdateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.BankdateTimePicker.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BankdateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.BankdateTimePicker.Location = new System.Drawing.Point(797, 387);
+            this.BankdateTimePicker.Location = new System.Drawing.Point(797, 367);
             this.BankdateTimePicker.Name = "BankdateTimePicker";
             this.BankdateTimePicker.ShowCheckBox = true;
             this.BankdateTimePicker.Size = new System.Drawing.Size(182, 25);
@@ -318,7 +318,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(710, 346);
+            this.label7.Location = new System.Drawing.Point(710, 327);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(366, 26);
             this.label7.TabIndex = 17;
@@ -330,9 +330,9 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(649, 460);
+            this.label8.Location = new System.Drawing.Point(711, 400);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(514, 132);
+            this.label8.Size = new System.Drawing.Size(353, 198);
             this.label8.TabIndex = 19;
             this.label8.Text = resources.GetString("label8.Text");
             // 
@@ -410,7 +410,7 @@
             this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
             this.button10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button10.Location = new System.Drawing.Point(947, 642);
+            this.button10.Location = new System.Drawing.Point(917, 610);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(129, 59);
             this.button10.TabIndex = 29;
@@ -488,7 +488,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1020, 741);
+            this.ClientSize = new System.Drawing.Size(1180, 682);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.textBox8);
