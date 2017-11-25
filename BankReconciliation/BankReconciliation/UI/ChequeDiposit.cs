@@ -267,7 +267,7 @@ namespace BankReconciliation
                         saveButton.Enabled = false;
                         GetData();
                         Reset();
-                        Condition();
+                       // Condition();
                         FillBank();
 
 
@@ -458,7 +458,7 @@ namespace BankReconciliation
                         saveButton.Enabled = false;
                         GetData();
                         Reset();
-                        Condition();
+                       // Condition();
                         FillBank();
 
 
@@ -494,7 +494,7 @@ namespace BankReconciliation
                 con = new SqlConnection(cs.DBConn);
                 con.Open();
                // string selectQuery = "Select AccountNo,Balances from Temp_Account2";
-                string selectQuery = "Select BankName,BranchName, AccountNo,Balance from BankAccounts";
+                string selectQuery = "Select BankName,BranchName, AccountNo, AvailableBalance from BankAccounts";
                 
                 SqlDataAdapter myadapter = new SqlDataAdapter(selectQuery, con);
                 DataTable dt = new DataTable();

@@ -49,12 +49,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label8);
@@ -87,9 +91,9 @@
             this.groupBox2.Controls.Add(this.checkBox1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox2.Location = new System.Drawing.Point(506, 132);
+            this.groupBox2.Location = new System.Drawing.Point(733, 57);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(243, 85);
+            this.groupBox2.Size = new System.Drawing.Size(21, 10);
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "If Overdraft Please Check Overdraft";
@@ -109,7 +113,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(223, 150);
+            this.comboBox1.Location = new System.Drawing.Point(223, 194);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(235, 29);
             this.comboBox1.TabIndex = 17;
@@ -145,7 +149,7 @@
             // 
             // accountTitleTextBox
             // 
-            this.accountTitleTextBox.Location = new System.Drawing.Point(223, 188);
+            this.accountTitleTextBox.Location = new System.Drawing.Point(223, 232);
             this.accountTitleTextBox.Name = "accountTitleTextBox";
             this.accountTitleTextBox.Size = new System.Drawing.Size(235, 29);
             this.accountTitleTextBox.TabIndex = 5;
@@ -163,7 +167,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(74, 190);
+            this.label6.Location = new System.Drawing.Point(74, 234);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(125, 22);
             this.label6.TabIndex = 11;
@@ -173,7 +177,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(47, 148);
+            this.label5.Location = new System.Drawing.Point(47, 192);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(152, 22);
             this.label5.TabIndex = 10;
@@ -250,7 +254,7 @@
             // 
             // initialBalanceTextBox
             // 
-            this.initialBalanceTextBox.Location = new System.Drawing.Point(223, 275);
+            this.initialBalanceTextBox.Location = new System.Drawing.Point(223, 319);
             this.initialBalanceTextBox.Name = "initialBalanceTextBox";
             this.initialBalanceTextBox.Size = new System.Drawing.Size(235, 29);
             this.initialBalanceTextBox.TabIndex = 7;
@@ -260,7 +264,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(70, 282);
+            this.label4.Location = new System.Drawing.Point(70, 326);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(129, 22);
             this.label4.TabIndex = 7;
@@ -270,7 +274,7 @@
             // 
             this.createButton.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createButton.ForeColor = System.Drawing.Color.Navy;
-            this.createButton.Location = new System.Drawing.Point(302, 325);
+            this.createButton.Location = new System.Drawing.Point(302, 369);
             this.createButton.Name = "createButton";
             this.createButton.Size = new System.Drawing.Size(132, 53);
             this.createButton.TabIndex = 8;
@@ -280,7 +284,7 @@
             // 
             // accountNoTextBox
             // 
-            this.accountNoTextBox.Location = new System.Drawing.Point(223, 230);
+            this.accountNoTextBox.Location = new System.Drawing.Point(223, 274);
             this.accountNoTextBox.Name = "accountNoTextBox";
             this.accountNoTextBox.Size = new System.Drawing.Size(235, 29);
             this.accountNoTextBox.TabIndex = 6;
@@ -299,7 +303,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(51, 237);
+            this.label3.Location = new System.Drawing.Point(51, 281);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(148, 22);
             this.label3.TabIndex = 2;
@@ -324,6 +328,24 @@
             this.label1.Size = new System.Drawing.Size(107, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bank Name";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(223, 150);
+            this.textBox1.MaxLength = 50;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(235, 29);
+            this.textBox1.TabIndex = 20;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(69, 152);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(130, 22);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Route Number";
             // 
             // BankDetailsInfo
             // 
@@ -368,5 +390,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
