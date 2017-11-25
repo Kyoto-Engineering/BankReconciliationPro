@@ -21,6 +21,8 @@ namespace BankReconciliation.UI
         private SqlDataAdapter sda;
 
         public int txnid;
+        public string currbalnc;
+        public string availblbalnc;
 
         public string ReturnValue1 { get; set; }
         public string ReturnValue2 { get; set; }
@@ -38,12 +40,13 @@ namespace BankReconciliation.UI
                 con.Open();
                 cmd =
                     new SqlCommand(
-                        "SELECT ODAccountTransaction.OdTransactionId,ODAccountTransaction.SystemTxnDate,ODAccountTransaction.BankTxnDate,Generate.CodeName,ODAccountTransaction.AccountNo,ODAccountTransaction.CheckNo,ODAccountTransaction.Credit,ODAccountTransaction.Debit,ODAccountTransaction.TransactionType,ODAccountTransaction.Particulars,ODAccountTransaction.Benificiary from ODAccountTransaction left outer join Generate ON ODAccountTransaction.AccountNo = Generate.AccountNo  ", con);
+                        "SELECT ODAccountTransaction.OdTransactionId,ODAccountTransaction.SystemTxnDate,ODAccountTransaction.BankTxnDate,Generate.CodeName,ODAccountTransaction.AccountNo,ODAccountTransaction.CheckNo,ODAccountTransaction.Credit,ODAccountTransaction.Debit,ODAccountTransaction.TransactionType,ODAccountTransaction.Particulars,ODAccountTransaction.Benificiary, ODAccountTransaction.SystemCurrentBalance, ODAccountTransaction.SystemAvailableBalance   from ODAccountTransaction left outer join Generate ON ODAccountTransaction.AccountNo = Generate.AccountNo  ", con);
                 rdr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                dataGridView1.Rows.Clear();
                 while (rdr.Read())
                 {
                     dataGridView1.Rows.Add(rdr[0], rdr[1], rdr[2], rdr[3], rdr[4], rdr[5], rdr[6], rdr[7], rdr[8], rdr[9],
-                        rdr[10]);
+                        rdr[10],rdr[11], rdr[12]);
                 }
               
                 con.Close();
@@ -86,6 +89,11 @@ namespace BankReconciliation.UI
                 textBox3.Text = dr.Cells[6].Value.ToString();
                 textBox5.Text = dr.Cells[10].Value.ToString();
                 textBox6.Text = dr.Cells[9].Value.ToString();
+
+                currbalnc = dr.Cells[11].Value.ToString();
+                availblbalnc = dr.Cells[12].Value.ToString();
+
+
 
             }
             catch (Exception ex)
@@ -144,7 +152,7 @@ namespace BankReconciliation.UI
                 con.Open();
                 cmd =
                     new SqlCommand(
-                        "SELECT ODAccountTransaction.OdTransactionId,ODAccountTransaction.SystemTxnDate,ODAccountTransaction.BankTxnDate,ODAccountTransaction.FundRNo,ODAccountTransaction.AccountNo,ODAccountTransaction.CheckNo,ODAccountTransaction.Credit,ODAccountTransaction.Debit,ODAccountTransaction.TransactionType,ODAccountTransaction.Particulars,ODAccountTransaction.Benificiary from ODAccountTransaction where ODAccountTransaction.OdTransactionId= '" + searchByIDTextBox.Text + "' ", con);
+                        "SELECT ODAccountTransaction.OdTransactionId,ODAccountTransaction.SystemTxnDate,ODAccountTransaction.BankTxnDate,Generate.CodeName,ODAccountTransaction.AccountNo,ODAccountTransaction.CheckNo,ODAccountTransaction.Credit,ODAccountTransaction.Debit,ODAccountTransaction.TransactionType,ODAccountTransaction.Particulars,ODAccountTransaction.Benificiary from ODAccountTransaction left outer join Generate ON ODAccountTransaction.AccountNo = Generate.AccountNo where ODAccountTransaction.OdTransactionId= '" + searchByIDTextBox.Text + "' ", con);
                 rdr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
                 //SqlDataAdapter dataAdapter = new SqlDataAdapter(q, con);
                 //DataTable dataTable1 = new DataTable();
@@ -174,7 +182,7 @@ namespace BankReconciliation.UI
                 con.Open();
                 cmd =
                     new SqlCommand(
-                        "SELECT ODAccountTransaction.OdTransactionId,ODAccountTransaction.SystemTxnDate,ODAccountTransaction.BankTxnDate,ODAccountTransaction.FundRNo,ODAccountTransaction.AccountNo,ODAccountTransaction.CheckNo,ODAccountTransaction.Credit,ODAccountTransaction.Debit,ODAccountTransaction.TransactionType,ODAccountTransaction.Particulars,ODAccountTransaction.Benificiary from ODAccountTransaction where ODAccountTransaction.Credit='" + searchByCreditBalanceTextBox.Text + "'  ", con);
+                        "SELECT ODAccountTransaction.OdTransactionId,ODAccountTransaction.SystemTxnDate,ODAccountTransaction.BankTxnDate,Generate.CodeName,ODAccountTransaction.AccountNo,ODAccountTransaction.CheckNo,ODAccountTransaction.Credit,ODAccountTransaction.Debit,ODAccountTransaction.TransactionType,ODAccountTransaction.Particulars,ODAccountTransaction.Benificiary from ODAccountTransaction left outer join Generate ON ODAccountTransaction.AccountNo = Generate.AccountNo where ODAccountTransaction.Credit='" + searchByCreditBalanceTextBox.Text + "'  ", con);
                 rdr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
                 //SqlDataAdapter dataAdapter = new SqlDataAdapter(q, con);
                 //DataTable dataTable1 = new DataTable();
@@ -256,9 +264,65 @@ namespace BankReconciliation.UI
             }
         }
 
-        private void button10_Click(object sender, EventArgs e)
+
+        private void clear()
         {
 
+
+
+
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                MessageBox.Show("You did not select any Txn from the Grid","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            else
+            {
+                try
+                {
+                    con = new SqlConnection(cs.DBConn);
+                    con.Open();
+                    string q1 = " update ODAccountTransaction set BankTxnDate = @d3 where ODAccountTransaction.OdTransactionId = '" + txnid + "'   ";
+                    cmd = new SqlCommand(q1, con);
+                    cmd.Parameters.AddWithValue("@d3", BankdateTimePicker.Value.ToLocalTime());
+                    cmd.ExecuteScalar();
+                    con.Close();
+
+                    con.Open();
+                    string str = "update ODAccountTransaction set BankCurrentBalance = @b1, BankAvailableBalance = @b2 where ODAccountTransaction.OdTransactionId = '" + txnid + "'  ";
+                    cmd = new SqlCommand(str, con);
+                    cmd.Parameters.AddWithValue("@b1", currbalnc);
+                    cmd.Parameters.AddWithValue("@b2", availblbalnc);
+                    cmd.ExecuteScalar();
+                    con.Close();
+
+
+                    con.Open();
+                    string qq3 = "insert into BankTxnTable(OdTransactionId, Bankname,AccountNo, BankTxnDate) values(@d1,@d2,@d3,@d4)"  + "SELECT CONVERT(int, SCOPE_IDENTITY())" ;
+                    cmd = new SqlCommand(qq3, con);
+                    cmd.Parameters.AddWithValue("@d1",txnid );
+                    cmd.Parameters.AddWithValue("@d2", SystemTxnDatetextBox.Text);
+                    cmd.Parameters.AddWithValue("@d3", textBox2.Text);
+                    cmd.Parameters.AddWithValue("@d4", BankdateTimePicker.Value.ToLocalTime());
+                    cmd.ExecuteScalar();
+                    con.Close();
+
+
+                    MessageBox.Show("Successful","Updated",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show(exception.Message,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                } 
+            }
+
+            
 
         }
     }
