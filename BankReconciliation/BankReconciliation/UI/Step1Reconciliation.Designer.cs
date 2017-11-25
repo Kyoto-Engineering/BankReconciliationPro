@@ -43,6 +43,8 @@
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupNamelabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -68,8 +70,6 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -189,6 +189,26 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "You Have Selected";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Location = new System.Drawing.Point(155, 194);
+            this.textBox9.MaxLength = 100;
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(296, 29);
+            this.textBox9.TabIndex = 29;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(10, 156);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(130, 22);
+            this.label13.TabIndex = 28;
+            this.label13.Text = "Credit Amount";
             // 
             // textBox6
             // 
@@ -435,26 +455,6 @@
             this.textBox8.TabIndex = 27;
             this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(155, 194);
-            this.textBox9.MaxLength = 100;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(296, 29);
-            this.textBox9.TabIndex = 29;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(10, 156);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(130, 22);
-            this.label13.TabIndex = 28;
-            this.label13.Text = "Credit Amount";
-            // 
             // button10
             // 
             this.button10.BackColor = System.Drawing.Color.Snow;
@@ -467,13 +467,14 @@
             this.button10.TabIndex = 29;
             this.button10.Text = "Update";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // Step1Reconciliation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1209, 741);
+            this.ClientSize = new System.Drawing.Size(1020, 741);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.textBox8);

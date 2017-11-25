@@ -255,5 +255,11 @@ namespace BankReconciliation.UI
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+
+        }
     }
 }
