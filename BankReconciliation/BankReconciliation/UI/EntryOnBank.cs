@@ -230,5 +230,15 @@ namespace BankReconciliation.UI
                 amountTextBox.Text = dr.Cells[9].Value.ToString();
             }
         }
+
+        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
