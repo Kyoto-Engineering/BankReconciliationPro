@@ -199,7 +199,7 @@ namespace BankReconciliation
 
         private void button10_Click(object sender, EventArgs e)
         {
-            EntryOnBank f2 = new EntryOnBank();
+            Step1Reconciliation f2 = new Step1Reconciliation();
             this.Visible = false;
             f2.ShowDialog();
             this.Visible = true;
