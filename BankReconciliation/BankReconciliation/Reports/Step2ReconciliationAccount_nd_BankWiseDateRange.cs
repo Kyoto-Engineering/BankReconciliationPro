@@ -16,14 +16,14 @@ namespace BankReconciliation.Reports {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class Step2ReconciliationAccount_nd_BankWise : ReportClass {
+    public class Step2ReconciliationAccount_nd_BankWiseDateRange : ReportClass {
         
-        public Step2ReconciliationAccount_nd_BankWise() {
+        public Step2ReconciliationAccount_nd_BankWiseDateRange() {
         }
         
         public override string ResourceName {
             get {
-                return "Step2ReconciliationAccount_nd_BankWise.rpt";
+                return "Step2ReconciliationAccount_nd_BankWiseDateRange.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace BankReconciliation.Reports {
         
         public override string FullResourceName {
             get {
-                return "BankReconciliation.Reports.Step2ReconciliationAccount_nd_BankWise.rpt";
+                return "BankReconciliation.Reports.Step2ReconciliationAccount_nd_BankWiseDateRange.rpt";
             }
             set {
                 // Do nothing
@@ -103,12 +103,28 @@ namespace BankReconciliation.Reports {
                 return this.DataDefinition.ParameterFields[1];
             }
         }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_Starting_Date {
+            get {
+                return this.DataDefinition.ParameterFields[2];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_Finishing_date {
+            get {
+                return this.DataDefinition.ParameterFields[3];
+            }
+        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedStep2ReconciliationAccount_nd_BankWise : Component, ICachedReport {
+    public class CachedStep2ReconciliationAccount_nd_BankWiseDateRange : Component, ICachedReport {
         
-        public CachedStep2ReconciliationAccount_nd_BankWise() {
+        public CachedStep2ReconciliationAccount_nd_BankWiseDateRange() {
         }
         
         [Browsable(false)]
@@ -145,7 +161,7 @@ namespace BankReconciliation.Reports {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            Step2ReconciliationAccount_nd_BankWise rpt = new Step2ReconciliationAccount_nd_BankWise();
+            Step2ReconciliationAccount_nd_BankWiseDateRange rpt = new Step2ReconciliationAccount_nd_BankWiseDateRange();
             rpt.Site = this.Site;
             return rpt;
         }
