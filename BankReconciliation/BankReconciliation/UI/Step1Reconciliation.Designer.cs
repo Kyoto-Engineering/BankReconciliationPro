@@ -157,7 +157,7 @@
             this.groupNamelabel.AutoSize = true;
             this.groupNamelabel.Font = new System.Drawing.Font("Times New Roman", 25F, System.Drawing.FontStyle.Bold);
             this.groupNamelabel.ForeColor = System.Drawing.Color.Black;
-            this.groupNamelabel.Location = new System.Drawing.Point(424, 9);
+            this.groupNamelabel.Location = new System.Drawing.Point(19, 9);
             this.groupNamelabel.Name = "groupNamelabel";
             this.groupNamelabel.Size = new System.Drawing.Size(331, 38);
             this.groupNamelabel.TabIndex = 9;
@@ -474,7 +474,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1020, 741);
+            this.ClientSize = new System.Drawing.Size(1180, 741);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.textBox8);
