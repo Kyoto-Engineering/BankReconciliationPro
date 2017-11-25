@@ -804,6 +804,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bank_reconcilliation_management_box__g1r_icon.ico" />
+    <None Include="Resources\banner.png" />
+    <None Include="Resources\Logowithoutnamarked.png" />
+    <None Include="Resources\BankReconciliationPRO.png" />
     <None Include="Resources\whiteyglossyrectanglebuttonmd.png" />
   </ItemGroup>
   <ItemGroup>

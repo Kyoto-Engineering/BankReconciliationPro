@@ -83,6 +83,26 @@ namespace BankReconciliation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BankReconciliationPRO {
+            get {
+                object obj = ResourceManager.GetObject("BankReconciliationPRO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap banner {
+            get {
+                object obj = ResourceManager.GetObject("banner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap id_login_form {
             get {
                 object obj = ResourceManager.GetObject("id-login-form", resourceCulture);
@@ -136,6 +156,16 @@ namespace BankReconciliation.Properties {
         internal static System.Drawing.Bitmap img36 {
             get {
                 object obj = ResourceManager.GetObject("img36", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logowithoutnamarked {
+            get {
+                object obj = ResourceManager.GetObject("Logowithoutnamarked", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
