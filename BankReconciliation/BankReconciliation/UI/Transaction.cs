@@ -32,5 +32,22 @@ namespace BankReconciliation.UI
             ww.ShowDialog();
             this.Visible = true;
         }
+
+        private void button4_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void button1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1_Click(this, new EventArgs());
+            }
+        }
     }
 }
