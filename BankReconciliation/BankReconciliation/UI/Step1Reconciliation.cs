@@ -277,54 +277,116 @@ namespace BankReconciliation.UI
 
         private void button10_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox1.Text))
+
+        }
+
+        private void searchByIDTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
             {
-                MessageBox.Show("You did not select any Txn from the Grid","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                searchByCreditBalanceTextBox.Focus();
+                e.Handled = true;
             }
+        }
 
-            else
-            {
-                try
-                {
-                    con = new SqlConnection(cs.DBConn);
-                    con.Open();
-                    string q1 = " update ODAccountTransaction set BankTxnDate = @d3 where ODAccountTransaction.OdTransactionId = '" + txnid + "'   ";
-                    cmd = new SqlCommand(q1, con);
-                    cmd.Parameters.AddWithValue("@d3", BankdateTimePicker.Value.ToLocalTime());
-                    cmd.ExecuteScalar();
-                    con.Close();
-
-                    con.Open();
-                    string str = "update ODAccountTransaction set BankCurrentBalance = @b1, BankAvailableBalance = @b2 where ODAccountTransaction.OdTransactionId = '" + txnid + "'  ";
-                    cmd = new SqlCommand(str, con);
-                    cmd.Parameters.AddWithValue("@b1", currbalnc);
-                    cmd.Parameters.AddWithValue("@b2", availblbalnc);
-                    cmd.ExecuteScalar();
-                    con.Close();
-
-
-                    con.Open();
-                    string qq3 = "insert into BankTxnTable(OdTransactionId, Bankname,AccountNo, BankTxnDate) values(@d1,@d2,@d3,@d4)"  + "SELECT CONVERT(int, SCOPE_IDENTITY())" ;
-                    cmd = new SqlCommand(qq3, con);
-                    cmd.Parameters.AddWithValue("@d1",txnid );
-                    cmd.Parameters.AddWithValue("@d2", SystemTxnDatetextBox.Text);
-                    cmd.Parameters.AddWithValue("@d3", textBox2.Text);
-                    cmd.Parameters.AddWithValue("@d4", BankdateTimePicker.Value.ToLocalTime());
-                    cmd.ExecuteScalar();
-                    con.Close();
-
-
-                    MessageBox.Show("Successful","Updated",MessageBoxButtons.OK,MessageBoxIcon.Information);
-
-                }
-                catch (Exception exception)
-                {
-                    MessageBox.Show(exception.Message,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                } 
-            }
-
+        private void searchByCreditBalanceTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
             
+                 if (e.KeyCode == Keys.Enter)
+            {
+                textBox7.Focus();
+                e.Handled = true;
+            }
+        }
 
+        private void textBox7_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+                       if (e.KeyCode == Keys.Enter)
+            {
+                textBox8.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void SystemTxnDatetextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBox1.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBox2.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+                if (e.KeyCode == Keys.Enter)
+            {
+                textBox3.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void textBox3_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBox9.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void textBox9_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBox4.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void textBox5_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+                  if (e.KeyCode == Keys.Enter)
+            {
+                textBox6.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void textBox6_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                BankdateTimePicker.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void BankdateTimePicker_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+                if (e.KeyCode == Keys.Enter)
+            {
+                button10.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void button10_KeyDown(object sender, KeyEventArgs e)
+        {
+            textBox7_TextChanged(this, new EventArgs());
         }
     }
 }

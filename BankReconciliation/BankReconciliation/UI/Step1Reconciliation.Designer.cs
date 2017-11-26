@@ -30,6 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Step1Reconciliation));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupNamelabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -60,19 +73,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.button10 = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -100,6 +100,71 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "OdTransactionId";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "SystemTxnDate";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "BankTxnDate";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "CodeName";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "AccountNo";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "CheckNo";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Credit";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Debit";
+            this.Column8.Name = "Column8";
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "TransactionType";
+            this.Column9.Name = "Column9";
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Particulars";
+            this.Column10.Name = "Column10";
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Benificiary";
+            this.Column11.Name = "Column11";
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Balance";
+            this.Column12.Name = "Column12";
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "AvailableB";
+            this.Column13.Name = "Column13";
             // 
             // groupNamelabel
             // 
@@ -135,7 +200,7 @@
             this.groupBox1.Location = new System.Drawing.Point(44, 301);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(478, 368);
-            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "You Have Selected";
             // 
@@ -146,7 +211,8 @@
             this.textBox9.MaxLength = 100;
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(296, 29);
-            this.textBox9.TabIndex = 29;
+            this.textBox9.TabIndex = 4;
+            this.textBox9.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox9_KeyDown);
             // 
             // label13
             // 
@@ -166,7 +232,8 @@
             this.textBox6.MaxLength = 100;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(296, 29);
-            this.textBox6.TabIndex = 27;
+            this.textBox6.TabIndex = 7;
+            this.textBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox6_KeyDown);
             // 
             // textBox5
             // 
@@ -175,7 +242,8 @@
             this.textBox5.MaxLength = 100;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(296, 29);
-            this.textBox5.TabIndex = 26;
+            this.textBox5.TabIndex = 6;
+            this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
             // 
             // textBox4
             // 
@@ -184,7 +252,7 @@
             this.textBox4.MaxLength = 100;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(296, 29);
-            this.textBox4.TabIndex = 25;
+            this.textBox4.TabIndex = 5;
             // 
             // textBox3
             // 
@@ -193,7 +261,8 @@
             this.textBox3.MaxLength = 100;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(296, 29);
-            this.textBox3.TabIndex = 24;
+            this.textBox3.TabIndex = 3;
+            this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
             // 
             // textBox2
             // 
@@ -202,7 +271,8 @@
             this.textBox2.MaxLength = 100;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(296, 29);
-            this.textBox2.TabIndex = 23;
+            this.textBox2.TabIndex = 2;
+            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             // 
             // textBox1
             // 
@@ -211,7 +281,8 @@
             this.textBox1.MaxLength = 100;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(296, 29);
-            this.textBox1.TabIndex = 22;
+            this.textBox1.TabIndex = 1;
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // label6
             // 
@@ -288,7 +359,8 @@
             this.SystemTxnDatetextBox.MaxLength = 100;
             this.SystemTxnDatetextBox.Name = "SystemTxnDatetextBox";
             this.SystemTxnDatetextBox.Size = new System.Drawing.Size(296, 29);
-            this.SystemTxnDatetextBox.TabIndex = 15;
+            this.SystemTxnDatetextBox.TabIndex = 0;
+            this.SystemTxnDatetextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SystemTxnDatetextBox_KeyDown);
             // 
             // SystemTxnDate
             // 
@@ -311,7 +383,8 @@
             this.BankdateTimePicker.Name = "BankdateTimePicker";
             this.BankdateTimePicker.ShowCheckBox = true;
             this.BankdateTimePicker.Size = new System.Drawing.Size(182, 25);
-            this.BankdateTimePicker.TabIndex = 18;
+            this.BankdateTimePicker.TabIndex = 5;
+            this.BankdateTimePicker.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BankdateTimePicker_KeyDown);
             // 
             // label7
             // 
@@ -350,8 +423,9 @@
             this.searchByIDTextBox.Location = new System.Drawing.Point(177, 87);
             this.searchByIDTextBox.Name = "searchByIDTextBox";
             this.searchByIDTextBox.Size = new System.Drawing.Size(100, 20);
-            this.searchByIDTextBox.TabIndex = 21;
+            this.searchByIDTextBox.TabIndex = 0;
             this.searchByIDTextBox.TextChanged += new System.EventHandler(this.searchByIDTextBox_TextChanged);
+            this.searchByIDTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchByIDTextBox_KeyDown);
             // 
             // label10
             // 
@@ -367,8 +441,9 @@
             this.searchByCreditBalanceTextBox.Location = new System.Drawing.Point(455, 90);
             this.searchByCreditBalanceTextBox.Name = "searchByCreditBalanceTextBox";
             this.searchByCreditBalanceTextBox.Size = new System.Drawing.Size(100, 20);
-            this.searchByCreditBalanceTextBox.TabIndex = 23;
+            this.searchByCreditBalanceTextBox.TabIndex = 1;
             this.searchByCreditBalanceTextBox.TextChanged += new System.EventHandler(this.searchByCreditBalanceTextBox_TextChanged);
+            this.searchByCreditBalanceTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchByCreditBalanceTextBox_KeyDown);
             // 
             // label11
             // 
@@ -384,8 +459,9 @@
             this.textBox7.Location = new System.Drawing.Point(737, 90);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 25;
+            this.textBox7.TabIndex = 2;
             this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.textBox7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox7_KeyDown);
             // 
             // label12
             // 
@@ -401,7 +477,7 @@
             this.textBox8.Location = new System.Drawing.Point(1011, 89);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 27;
+            this.textBox8.TabIndex = 3;
             this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // button10
@@ -413,75 +489,10 @@
             this.button10.Location = new System.Drawing.Point(917, 610);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(129, 59);
-            this.button10.TabIndex = 29;
+            this.button10.TabIndex = 6;
             this.button10.Text = "Update";
             this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "OdTransactionId";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "SystemTxnDate";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "BankTxnDate";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "CodeName";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "AccountNo";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "CheckNo";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Credit";
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Debit";
-            this.Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "TransactionType";
-            this.Column9.Name = "Column9";
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Particulars";
-            this.Column10.Name = "Column10";
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Benificiary";
-            this.Column11.Name = "Column11";
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Balance";
-            this.Column12.Name = "Column12";
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "AvailableB";
-            this.Column13.Name = "Column13";
+            this.button10.Click += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // Step1Reconciliation
             // 

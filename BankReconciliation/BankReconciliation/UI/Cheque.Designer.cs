@@ -57,7 +57,7 @@
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(147, 78);
-            this.button2.TabIndex = 1;
+            this.button2.TabIndex = 2;
             this.button2.Text = "Cheque Print";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -70,7 +70,7 @@
             this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(177, 75);
-            this.button3.TabIndex = 2;
+            this.button3.TabIndex = 1;
             this.button3.Text = "Cheque Reverse";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -84,7 +84,7 @@
             this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(177, 73);
-            this.button4.TabIndex = 3;
+            this.button4.TabIndex = 4;
             this.button4.Text = "Cheque Destroy";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -98,7 +98,7 @@
             this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(177, 78);
-            this.button5.TabIndex = 4;
+            this.button5.TabIndex = 3;
             this.button5.Text = "Cheque  Cancel";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);

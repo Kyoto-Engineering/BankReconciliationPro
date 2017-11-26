@@ -199,7 +199,7 @@
             this.button4.Location = new System.Drawing.Point(947, 6);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(92, 43);
-            this.button4.TabIndex = 9;
+            this.button4.TabIndex = 5;
             this.button4.Text = "LogOut";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -282,7 +282,7 @@
             this.button7.Location = new System.Drawing.Point(79, 120);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(129, 59);
-            this.button7.TabIndex = 12;
+            this.button7.TabIndex = 0;
             this.button7.Text = "Bank Account Management";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -296,7 +296,7 @@
             this.button8.Location = new System.Drawing.Point(79, 192);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(129, 59);
-            this.button8.TabIndex = 13;
+            this.button8.TabIndex = 1;
             this.button8.Text = "Transactoin";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
@@ -310,7 +310,7 @@
             this.button9.Location = new System.Drawing.Point(79, 337);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(129, 59);
-            this.button9.TabIndex = 14;
+            this.button9.TabIndex = 3;
             this.button9.Text = "Reports and Statements";
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
@@ -324,7 +324,7 @@
             this.button10.Location = new System.Drawing.Point(79, 266);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(129, 59);
-            this.button10.TabIndex = 15;
+            this.button10.TabIndex = 2;
             this.button10.Text = "Reconsile";
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
@@ -338,7 +338,7 @@
             this.button11.Location = new System.Drawing.Point(79, 414);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(129, 59);
-            this.button11.TabIndex = 16;
+            this.button11.TabIndex = 4;
             this.button11.Text = "About";
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);

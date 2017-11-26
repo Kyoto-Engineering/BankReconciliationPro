@@ -48,20 +48,22 @@
             this.button1.Location = new System.Drawing.Point(79, 184);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 47);
-            this.button1.TabIndex = 4;
+            this.button1.TabIndex = 1;
             this.button1.Text = "Withdraw";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button1_KeyDown);
             // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(79, 107);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(128, 47);
-            this.button4.TabIndex = 7;
+            this.button4.TabIndex = 0;
             this.button4.Text = "Deposite";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button4_KeyDown);
             // 
             // Transaction
             // 

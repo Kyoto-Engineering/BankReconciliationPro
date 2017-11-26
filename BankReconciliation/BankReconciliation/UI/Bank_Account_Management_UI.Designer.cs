@@ -53,10 +53,11 @@
             this.button6.Location = new System.Drawing.Point(76, 174);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(117, 54);
-            this.button6.TabIndex = 12;
+            this.button6.TabIndex = 1;
             this.button6.Text = "Overdraft Facilities";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button6_KeyDown);
             // 
             // addNewBankButton
             // 
@@ -66,10 +67,11 @@
             this.addNewBankButton.Location = new System.Drawing.Point(76, 110);
             this.addNewBankButton.Name = "addNewBankButton";
             this.addNewBankButton.Size = new System.Drawing.Size(117, 54);
-            this.addNewBankButton.TabIndex = 13;
+            this.addNewBankButton.TabIndex = 0;
             this.addNewBankButton.Text = "Create Bank  Account";
             this.addNewBankButton.UseVisualStyleBackColor = false;
             this.addNewBankButton.Click += new System.EventHandler(this.addNewBankButton_Click);
+            this.addNewBankButton.KeyDown += new System.Windows.Forms.KeyEventHandler(this.addNewBankButton_KeyDown);
             // 
             // checkLoadingButton
             // 
@@ -79,10 +81,11 @@
             this.checkLoadingButton.Location = new System.Drawing.Point(76, 240);
             this.checkLoadingButton.Name = "checkLoadingButton";
             this.checkLoadingButton.Size = new System.Drawing.Size(117, 57);
-            this.checkLoadingButton.TabIndex = 14;
+            this.checkLoadingButton.TabIndex = 2;
             this.checkLoadingButton.Text = "Cheque";
             this.checkLoadingButton.UseVisualStyleBackColor = false;
             this.checkLoadingButton.Click += new System.EventHandler(this.checkLoadingButton_Click);
+            this.checkLoadingButton.KeyDown += new System.Windows.Forms.KeyEventHandler(this.checkLoadingButton_KeyDown);
             // 
             // registerButton
             // 
@@ -91,10 +94,11 @@
             this.registerButton.Location = new System.Drawing.Point(79, 313);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(113, 51);
-            this.registerButton.TabIndex = 15;
+            this.registerButton.TabIndex = 3;
             this.registerButton.Text = "Register New User ";
             this.registerButton.UseVisualStyleBackColor = false;
             this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
+            this.registerButton.KeyDown += new System.Windows.Forms.KeyEventHandler(this.registerButton_KeyDown);
             // 
             // Bank_Account_Management_UI
             // 

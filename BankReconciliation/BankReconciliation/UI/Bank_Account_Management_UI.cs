@@ -50,5 +50,42 @@ namespace BankReconciliation.UI
             frm.ShowDialog();
             this.Visible = false;
         }
+
+        private void addNewBankButton_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                addNewBankButton_Click(this, new EventArgs());
+            }
+        }
+
+        private void button6_KeyDown(object sender, KeyEventArgs e)
+        {
+           
+               
+           if (e.KeyCode == Keys.Enter)
+            {
+                button6_Click(this, new EventArgs());
+            }
+
+        }
+
+        private void checkLoadingButton_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+         if (e.KeyCode == Keys.Enter)
+            {
+                checkLoadingButton_Click(this, new EventArgs());
+            }
+        }
+
+        private void registerButton_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                registerButton_Click(this, new EventArgs());
+            }  
+        }
+        }
     }
-}
+
