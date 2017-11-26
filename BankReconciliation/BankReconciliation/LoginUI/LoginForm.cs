@@ -207,5 +207,14 @@ namespace BankReconciliation.LoginUI
                 e.Handled = true;
             }
         }
+
+        private void LoginForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txt2Password.Focus();
+                e.Handled = true;
+            }
+        }
     }
 }
