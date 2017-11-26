@@ -139,7 +139,7 @@ namespace BankReconciliation.UI
 
                         con = new SqlConnection(cs.DBConn);
                         con.Open();
-                        string ct = "select Transactions.Id from Transactions Where Transactions.Debit IS NOT NULL And  Transactions.Bankname='" + bankNameComboBox.Text + "'And Transactions.CheckNo='" + chequeComboBox.Text + "' And Transactions.AccountNo='" + cmbAccountDNo.Text + "'";
+                        string ct = "select ODAccountTransaction.OdTransactionId from ODAccountTransaction Where ODAccountTransaction.Debit IS NOT NULL And  ODAccountTransaction.Bankname='" + bankNameComboBox.Text + "'And ODAccountTransaction.CheckNo='" + chequeComboBox.Text + "' And ODAccountTransaction.AccountNo='" + cmbAccountDNo.Text + "'";
                         cmd = new SqlCommand(ct);
                         cmd.Connection = con;
                         rdr = cmd.ExecuteReader();

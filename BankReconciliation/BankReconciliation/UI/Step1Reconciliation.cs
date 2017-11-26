@@ -80,9 +80,10 @@ namespace BankReconciliation.UI
             {
                 DataGridViewRow dr = dataGridView1.CurrentRow;
                 txnid = Convert.ToInt32(dr.Cells[0].Value.ToString());
-               
+                
+                SystemTxnDatetextBox.Text = dr.Cells[3].Value.ToString();
                 textBox1.Text = txnid.ToString();
-                textBox2.Text = dr.Cells[4].Value.ToString();
+               // textBox2.Text = dr.Cells[4].Value.ToString();
                 textBox2.Text = dr.Cells[4].Value.ToString();
                 textBox4.Text = dr.Cells[5].Value.ToString();
                 textBox9.Text = dr.Cells[7].Value.ToString();

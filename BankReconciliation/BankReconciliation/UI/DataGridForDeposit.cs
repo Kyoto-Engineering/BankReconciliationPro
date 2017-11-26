@@ -26,7 +26,7 @@ namespace BankReconciliation.UI
                 con = new SqlConnection(cs.DBConn);
                 con.Open();
                 // string selectQuery = "Select AccountNo,Balances from Temp_Account2";
-                string selectQuery = "Select TransactionType,ChequeFromBank,Benificiary,Particulars,CheckNo,BankName, AccountNo,Credit,Debit,CurrentBalance,TransactionDates from Transactions order by Id desc";
+                string selectQuery = "Select TransactionType,ChequeFromBank,Benificiary,Particulars,CheckNo,BankName, AccountNo,Credit,Debit,SystemCurrentBalance, SystemAvailableBalance , SystemTxnDate, BankCurrentBalance, BankAvailableBalance, BankTxnDate from ODAccountTransaction order by OdTransactionId desc";
 
                 SqlDataAdapter myadapter = new SqlDataAdapter(selectQuery, con);
                 DataTable dt = new DataTable();
