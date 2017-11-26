@@ -179,6 +179,7 @@
             this.typeOfAccountTextBox.Name = "typeOfAccountTextBox";
             this.typeOfAccountTextBox.Size = new System.Drawing.Size(235, 29);
             this.typeOfAccountTextBox.TabIndex = 8;
+            this.typeOfAccountTextBox.Visible = false;
             this.typeOfAccountTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.typeOfAccountTextBox_KeyDown);
             // 
             // label6

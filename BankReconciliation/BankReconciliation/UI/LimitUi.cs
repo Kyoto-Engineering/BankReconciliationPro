@@ -80,6 +80,24 @@ namespace BankReconciliation.UI
 
         }
 
+        private void clearboxes()
+        {
+
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            textBox5.Clear();
+            dateTimePicker1.Value = DateTime.UtcNow;
+            textBox6.Clear();
+            dataGridView1.Rows.Clear();
+            dataGridView2.Rows.Clear();
+            grdld();
+            grid2ld();
+
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(textBox1.Text))
@@ -169,13 +187,15 @@ namespace BankReconciliation.UI
                     cmd.ExecuteScalar();
                     con.Close();
 
-                    MessageBox.Show("Successful", "Successful",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
                     con.Open();
                     string up = "Update BankAccounts set AvailableBalance = Balance + '" + decimal.Parse(textBox5.Text) + "' where BankAccounts.AccountNo = '" + textBox3.Text + "'  ";
                     cmd= new SqlCommand(up, con);
                     cmd.ExecuteScalar();
                     con.Close();
+
+                    MessageBox.Show("Successful", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clearboxes();
                 }
                 catch (Exception exception)
                 {

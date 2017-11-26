@@ -175,6 +175,10 @@ namespace BankReconciliation.UI
             accountNoTextBox.Text = "";
             initialBalanceTextBox.Text = "";
             bankShortNameTextBox.Clear();
+            textBox1.Clear();
+            comboBox1.Items.Clear();
+            load_Acc_Type();
+
         }
         private void Report()
         {
