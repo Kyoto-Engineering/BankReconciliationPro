@@ -38,5 +38,32 @@ namespace BankReconciliation.UI
             Lui.ShowDialog();
             this.Visible = true;
         }
+
+        private void button1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button3.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void button3_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+                 if (e.KeyCode == Keys.Enter)
+            {
+                button2.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void button4_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button3_Click(this, new EventArgs());
+            }
+        }
     }
 }
