@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BankDetailsInfo));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -49,8 +51,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -86,6 +86,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Create New Bank Account";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(69, 152);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(130, 22);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Route Number";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(223, 150);
+            this.textBox1.MaxLength = 50;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(235, 29);
+            this.textBox1.TabIndex = 3;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.checkBox1);
@@ -116,7 +134,7 @@
             this.comboBox1.Location = new System.Drawing.Point(223, 194);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(235, 29);
-            this.comboBox1.TabIndex = 17;
+            this.comboBox1.TabIndex = 4;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label8
@@ -160,7 +178,7 @@
             this.typeOfAccountTextBox.Location = new System.Drawing.Point(46, 394);
             this.typeOfAccountTextBox.Name = "typeOfAccountTextBox";
             this.typeOfAccountTextBox.Size = new System.Drawing.Size(235, 29);
-            this.typeOfAccountTextBox.TabIndex = 4;
+            this.typeOfAccountTextBox.TabIndex = 8;
             this.typeOfAccountTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.typeOfAccountTextBox_KeyDown);
             // 
             // label6
@@ -277,7 +295,7 @@
             this.createButton.Location = new System.Drawing.Point(302, 369);
             this.createButton.Name = "createButton";
             this.createButton.Size = new System.Drawing.Size(132, 53);
-            this.createButton.TabIndex = 8;
+            this.createButton.TabIndex = 9;
             this.createButton.Text = "Create";
             this.createButton.UseVisualStyleBackColor = true;
             this.createButton.Click += new System.EventHandler(this.createButton_Click);
@@ -328,24 +346,6 @@
             this.label1.Size = new System.Drawing.Size(107, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bank Name";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(223, 150);
-            this.textBox1.MaxLength = 50;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(235, 29);
-            this.textBox1.TabIndex = 20;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(69, 152);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(130, 22);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "Route Number";
             // 
             // BankDetailsInfo
             // 
