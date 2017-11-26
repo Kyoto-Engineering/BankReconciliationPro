@@ -34,6 +34,7 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,12 +44,11 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -95,6 +95,11 @@
             this.Column5.HeaderText = "OD";
             this.Column5.Name = "Column5";
             // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Id";
+            this.Column6.Name = "Column6";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -112,7 +117,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(268, 24);
-            this.textBox1.TabIndex = 3;
+            this.textBox1.TabIndex = 0;
             // 
             // label2
             // 
@@ -141,7 +146,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(268, 24);
-            this.textBox2.TabIndex = 5;
+            this.textBox2.TabIndex = 1;
             // 
             // label4
             // 
@@ -160,7 +165,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(268, 24);
-            this.textBox3.TabIndex = 7;
+            this.textBox3.TabIndex = 2;
             // 
             // comboBox1
             // 
@@ -172,7 +177,7 @@
             this.comboBox1.Location = new System.Drawing.Point(143, 220);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(268, 26);
-            this.comboBox1.TabIndex = 10;
+            this.comboBox1.TabIndex = 4;
             // 
             // label5
             // 
@@ -183,11 +188,6 @@
             this.label5.Size = new System.Drawing.Size(76, 20);
             this.label5.TabIndex = 11;
             this.label5.Text = "Mark OD:";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Id";
-            this.Column6.Name = "Column6";
             // 
             // label6
             // 
@@ -206,7 +206,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(268, 24);
-            this.textBox4.TabIndex = 12;
+            this.textBox4.TabIndex = 3;
             // 
             // groupBox1
             // 
@@ -224,19 +224,9 @@
             this.groupBox1.Location = new System.Drawing.Point(34, 119);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(467, 413);
-            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Selected Bank Account";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Location = new System.Drawing.Point(516, 119);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(535, 413);
-            this.groupBox2.TabIndex = 15;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Select From Here";
             // 
             // button1
             // 
@@ -247,10 +237,20 @@
             this.button1.Location = new System.Drawing.Point(197, 318);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 39);
-            this.button1.TabIndex = 9;
+            this.button1.TabIndex = 5;
             this.button1.Text = "Done";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Location = new System.Drawing.Point(516, 119);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(535, 413);
+            this.groupBox2.TabIndex = 15;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Select From Here";
             // 
             // CreateOverDraftAcc
             // 
