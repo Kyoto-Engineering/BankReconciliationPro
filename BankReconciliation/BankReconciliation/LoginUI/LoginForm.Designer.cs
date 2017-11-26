@@ -68,7 +68,7 @@
             this.txt2Password.Name = "txt2Password";
             this.txt2Password.PasswordChar = '*';
             this.txt2Password.Size = new System.Drawing.Size(200, 26);
-            this.txt2Password.TabIndex = 3;
+            this.txt2Password.TabIndex = 1;
             this.txt2Password.TextChanged += new System.EventHandler(this.txt2Password_TextChanged);
             this.txt2Password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt2Password_KeyDown);
             // 
@@ -82,7 +82,7 @@
             this.loginButton.Location = new System.Drawing.Point(94, 345);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(200, 32);
-            this.loginButton.TabIndex = 4;
+            this.loginButton.TabIndex = 2;
             this.loginButton.Text = "LOGIN";
             this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
@@ -251,6 +251,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bank Reconciliation System V.1.0.0.40";
             this.Load += new System.EventHandler(this.LoginForm_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LoginForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).EndInit();
