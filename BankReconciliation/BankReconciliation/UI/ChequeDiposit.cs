@@ -809,7 +809,7 @@ namespace BankReconciliation
             Tables tables = default(Tables);
             //	Table table = default(Table);
             var with1 = reportConInfo;
-            with1.ServerName = "tcp:KyotoServer,49172";
+            with1.ServerName = "tcp:kyotoServer,49172";
             with1.DatabaseName = "BankReconciliationDBProNovember";
             with1.UserID = "sa";
             with1.Password = "SystemAdministrator";
@@ -862,7 +862,7 @@ namespace BankReconciliation
             Tables tables = default(Tables);
             //	Table table = default(Table);
             var with1 = reportConInfo;
-            with1.ServerName = "tcp:KyotoServer,49172";
+            with1.ServerName = "tcp:kyotoServer,49172";
             with1.DatabaseName = "BankReconciliationDBProNovember";
             with1.UserID = "sa";
             with1.Password = "SystemAdministrator";
@@ -915,7 +915,7 @@ namespace BankReconciliation
             Tables tables = default(Tables);
             //	Table table = default(Table);
             var with1 = reportConInfo;
-            with1.ServerName = "tcp:KyotoServer,49172";
+            with1.ServerName = "tcp:kyotoServer,49172";
             with1.DatabaseName = "BankReconciliationDBProNovember";
             with1.UserID = "sa";
             with1.Password = "SystemAdministrator";

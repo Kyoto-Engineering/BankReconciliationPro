@@ -268,7 +268,16 @@ namespace BankReconciliation.UI
 
         private void clear()
         {
-
+            SystemTxnDatetextBox.Clear();
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox4.Clear();
+            textBox9.Clear();
+            textBox3.Clear();
+            textBox5.Clear();
+            textBox6.Clear();
+            dataGridView1.Rows.Clear();
+            LoadData();
 
 
 
@@ -277,6 +286,37 @@ namespace BankReconciliation.UI
 
         private void button10_Click(object sender, EventArgs e)
         {
+            try
+            {
+                con = new SqlConnection(cs.DBConn);
+                con.Open();
+                string qq3 = "update ODAccountTransaction set ODAccountTransaction.BankTxnDate= @bdtn , ODAccountTransaction.BankCurrentBalance = @bcb, ODAccountTransaction.BankAvailableBalance = @bab where ODAccountTransaction.OdTransactionId = '" + txnid + "' ";
+                cmd = new SqlCommand(qq3, con);
+                cmd.Parameters.AddWithValue("@bdtn", BankdateTimePicker.Value.ToLocalTime());
+                cmd.Parameters.AddWithValue("@bcb", currbalnc);
+                cmd.Parameters.AddWithValue("@bab", availblbalnc);
+                cmd.ExecuteScalar();
+                con.Close();
+
+                con.Open();
+                string qq4 = "insert into BankTxnTable (OdTransactionId,Bankname,AccountNo,BankTxnDate ) values(@d1, @d2, @d3, @d4)" + "SELECT CONVERT(int, SCOPE_IDENTITY())";
+                cmd = new SqlCommand(qq4, con);
+                cmd.Parameters.AddWithValue("@d1", txnid);
+                cmd.Parameters.AddWithValue("@d2", SystemTxnDatetextBox.Text);
+                cmd.Parameters.AddWithValue("@d3", textBox2.Text);
+                cmd.Parameters.AddWithValue("@d4", BankdateTimePicker.Value.ToLocalTime());
+                cmd.ExecuteScalar();
+                con.Close();
+
+                MessageBox.Show("Update Successfully", "successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                clear();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+
 
         }
 
