@@ -38,19 +38,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(298, 9);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(30, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(291, 24);
+            this.label1.Size = new System.Drawing.Size(369, 31);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Bank Account Management UI";
+            this.label1.Text = "Bank Account Management";
             // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.Snow;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button6.Location = new System.Drawing.Point(76, 174);
+            this.button6.Location = new System.Drawing.Point(244, 110);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(117, 54);
             this.button6.TabIndex = 1;
@@ -78,7 +79,7 @@
             this.checkLoadingButton.BackColor = System.Drawing.Color.SeaShell;
             this.checkLoadingButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkLoadingButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.checkLoadingButton.Location = new System.Drawing.Point(76, 240);
+            this.checkLoadingButton.Location = new System.Drawing.Point(79, 196);
             this.checkLoadingButton.Name = "checkLoadingButton";
             this.checkLoadingButton.Size = new System.Drawing.Size(117, 57);
             this.checkLoadingButton.TabIndex = 2;
@@ -91,7 +92,7 @@
             // 
             this.registerButton.BackColor = System.Drawing.Color.AntiqueWhite;
             this.registerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registerButton.Location = new System.Drawing.Point(79, 313);
+            this.registerButton.Location = new System.Drawing.Point(244, 196);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(113, 51);
             this.registerButton.TabIndex = 3;
@@ -104,7 +105,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(886, 553);
+            this.BackColor = System.Drawing.Color.Khaki;
+            this.ClientSize = new System.Drawing.Size(464, 316);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.checkLoadingButton);
             this.Controls.Add(this.addNewBankButton);
