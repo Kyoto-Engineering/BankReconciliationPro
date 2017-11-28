@@ -449,5 +449,15 @@ namespace BankReconciliation.UI
                 this.Visible = true;
             }
         }
+
+        private void PendingBankTransactionbutton_Click(object sender, EventArgs e)
+        {
+            {
+                PendingBankTxn f2 = new PendingBankTxn();
+                this.Visible = false;
+                f2.ShowDialog();
+                this.Visible = true;
+            }
+        }
     }
 }

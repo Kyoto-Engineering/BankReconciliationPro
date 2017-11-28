@@ -250,6 +250,12 @@
     <Compile Include="Reports\Particulers.Designer.cs">
       <DependentUpon>Particulers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PendingBankTxn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\PendingBankTxn.Designer.cs">
+      <DependentUpon>PendingBankTxn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\PositivePayInstructionReport.cs">
       <DependentUpon>PositivePayInstructionReport.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -620,6 +626,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Particulers.resx">
       <DependentUpon>Particulers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PendingBankTxn.resx">
+      <DependentUpon>PendingBankTxn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PositivePayInstructionReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
