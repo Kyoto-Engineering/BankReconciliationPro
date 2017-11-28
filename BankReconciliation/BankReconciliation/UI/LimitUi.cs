@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BankReconciliation.LoginUI;
+using BankReconciliation.Reports;
 
 namespace BankReconciliation.UI
 {
@@ -204,6 +205,16 @@ namespace BankReconciliation.UI
                 }
 
 
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            {
+                LimitCreationReportUI f2 = new LimitCreationReportUI();
+                this.Visible = false;
+                f2.ShowDialog();
+                this.Visible = true;
             }
         }
 
