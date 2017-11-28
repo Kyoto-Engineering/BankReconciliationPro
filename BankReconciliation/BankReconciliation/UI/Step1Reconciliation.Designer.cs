@@ -493,9 +493,9 @@
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold);
-            this.groupBox2.Location = new System.Drawing.Point(601, 537);
+            this.groupBox2.Location = new System.Drawing.Point(591, 537);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(548, 122);
+            this.groupBox2.Size = new System.Drawing.Size(564, 122);
             this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Step 1 Reconciliation Statements";
@@ -506,7 +506,7 @@
             this.PendingBankTransactionbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PendingBankTransactionbutton.BackgroundImage")));
             this.PendingBankTransactionbutton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PendingBankTransactionbutton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.PendingBankTransactionbutton.Location = new System.Drawing.Point(410, 41);
+            this.PendingBankTransactionbutton.Location = new System.Drawing.Point(423, 41);
             this.PendingBankTransactionbutton.Name = "PendingBankTransactionbutton";
             this.PendingBankTransactionbutton.Size = new System.Drawing.Size(119, 49);
             this.PendingBankTransactionbutton.TabIndex = 10;
@@ -520,7 +520,7 @@
             this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Location = new System.Drawing.Point(136, 41);
+            this.button3.Location = new System.Drawing.Point(154, 41);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(119, 49);
             this.button3.TabIndex = 9;
@@ -534,7 +534,7 @@
             this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(271, 41);
+            this.button2.Location = new System.Drawing.Point(289, 41);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(119, 49);
             this.button2.TabIndex = 8;
@@ -548,7 +548,7 @@
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(6, 41);
+            this.button1.Location = new System.Drawing.Point(20, 41);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 49);
             this.button1.TabIndex = 7;
