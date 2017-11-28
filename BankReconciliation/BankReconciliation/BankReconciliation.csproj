@@ -262,6 +262,11 @@
     <Compile Include="Reports\PendingBankTxn.Designer.cs">
       <DependentUpon>PendingBankTxn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PendingTypeStep1ReconciliationAll.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PendingTypeStep1ReconciliationAll.rpt</DependentUpon>
+    </Compile>
     <Compile Include="Reports\PositivePayInstruction.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -646,6 +651,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PendingBankTxn.resx">
       <DependentUpon>PendingBankTxn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PendingTypeStep1ReconciliationAll.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PendingTypeStep1ReconciliationAll.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PositivePayInstruction.resx">
       <DependentUpon>PositivePayInstruction.cs</DependentUpon>
