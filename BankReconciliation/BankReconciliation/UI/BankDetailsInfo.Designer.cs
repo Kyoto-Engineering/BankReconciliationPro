@@ -81,7 +81,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(12, 11);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(842, 488);
+            this.groupBox1.Size = new System.Drawing.Size(558, 447);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Create New Bank Account";
@@ -115,6 +115,7 @@
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "If Overdraft Please Check Overdraft";
+            this.groupBox2.Visible = false;
             // 
             // checkBox1
             // 
@@ -142,9 +143,8 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(464, 76);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(161, 21);
+            this.label8.Size = new System.Drawing.Size(0, 21);
             this.label8.TabIndex = 16;
-            this.label8.Text = "(Six Character Max)";
             // 
             // bankShortNameTextBox
             // 
@@ -175,7 +175,7 @@
             // 
             // typeOfAccountTextBox
             // 
-            this.typeOfAccountTextBox.Location = new System.Drawing.Point(46, 394);
+            this.typeOfAccountTextBox.Location = new System.Drawing.Point(46, 383);
             this.typeOfAccountTextBox.Name = "typeOfAccountTextBox";
             this.typeOfAccountTextBox.Size = new System.Drawing.Size(235, 29);
             this.typeOfAccountTextBox.TabIndex = 8;
@@ -292,8 +292,8 @@
             // createButton
             // 
             this.createButton.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createButton.ForeColor = System.Drawing.Color.Navy;
-            this.createButton.Location = new System.Drawing.Point(302, 369);
+            this.createButton.ForeColor = System.Drawing.Color.Blue;
+            this.createButton.Location = new System.Drawing.Point(314, 370);
             this.createButton.Name = "createButton";
             this.createButton.Size = new System.Drawing.Size(132, 53);
             this.createButton.TabIndex = 9;
@@ -352,8 +352,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(866, 505);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(613, 505);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.Color.Blue;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
