@@ -98,7 +98,7 @@
             this.groupBox1.Location = new System.Drawing.Point(31, 71);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(472, 562);
-            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
@@ -418,7 +418,7 @@
             this.groupBox7.Location = new System.Drawing.Point(655, 576);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(229, 73);
-            this.groupBox7.TabIndex = 7;
+            this.groupBox7.TabIndex = 1;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Approval For Limit Creation";
             // 
@@ -428,7 +428,7 @@
             this.button2.Location = new System.Drawing.Point(54, 19);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(122, 48);
-            this.button2.TabIndex = 4;
+            this.button2.TabIndex = 0;
             this.button2.Text = "Get Statement";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
