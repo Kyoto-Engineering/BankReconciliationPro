@@ -496,7 +496,7 @@
             this.groupBox2.Location = new System.Drawing.Point(591, 537);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(564, 122);
-            this.groupBox2.TabIndex = 29;
+            this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Step 1 Reconciliation Statements";
             // 
@@ -509,7 +509,7 @@
             this.PendingBankTransactionbutton.Location = new System.Drawing.Point(423, 41);
             this.PendingBankTransactionbutton.Name = "PendingBankTransactionbutton";
             this.PendingBankTransactionbutton.Size = new System.Drawing.Size(119, 49);
-            this.PendingBankTransactionbutton.TabIndex = 10;
+            this.PendingBankTransactionbutton.TabIndex = 3;
             this.PendingBankTransactionbutton.Text = "Pending Bank Transaction";
             this.PendingBankTransactionbutton.UseVisualStyleBackColor = false;
             this.PendingBankTransactionbutton.Click += new System.EventHandler(this.PendingBankTransactionbutton_Click);
@@ -523,7 +523,7 @@
             this.button3.Location = new System.Drawing.Point(154, 41);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(119, 49);
-            this.button3.TabIndex = 9;
+            this.button3.TabIndex = 1;
             this.button3.Text = "Account Wise Transaction";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -537,7 +537,7 @@
             this.button2.Location = new System.Drawing.Point(289, 41);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(119, 49);
-            this.button2.TabIndex = 8;
+            this.button2.TabIndex = 2;
             this.button2.Text = "Date Wise Transaction";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -551,7 +551,7 @@
             this.button1.Location = new System.Drawing.Point(20, 41);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 49);
-            this.button1.TabIndex = 7;
+            this.button1.TabIndex = 0;
             this.button1.Text = "All Transaction";
             this.button1.UseVisualStyleBackColor = false;
             // 

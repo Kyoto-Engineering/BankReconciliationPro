@@ -58,7 +58,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 38);
-            this.button1.TabIndex = 1;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -70,7 +70,7 @@
             this.cmbAccountDNo.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.cmbAccountDNo.Name = "cmbAccountDNo";
             this.cmbAccountDNo.Size = new System.Drawing.Size(406, 29);
-            this.cmbAccountDNo.TabIndex = 2;
+            this.cmbAccountDNo.TabIndex = 1;
             this.cmbAccountDNo.SelectedIndexChanged += new System.EventHandler(this.cmbAccountDNo_SelectedIndexChanged);
             // 
             // chequeComboBox
@@ -80,7 +80,7 @@
             this.chequeComboBox.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.chequeComboBox.Name = "chequeComboBox";
             this.chequeComboBox.Size = new System.Drawing.Size(406, 29);
-            this.chequeComboBox.TabIndex = 3;
+            this.chequeComboBox.TabIndex = 2;
             // 
             // label1
             // 
@@ -125,7 +125,7 @@
             this.causeTextBox.MaxLength = 50;
             this.causeTextBox.Name = "causeTextBox";
             this.causeTextBox.Size = new System.Drawing.Size(406, 29);
-            this.causeTextBox.TabIndex = 7;
+            this.causeTextBox.TabIndex = 3;
             // 
             // label4
             // 
