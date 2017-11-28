@@ -274,6 +274,16 @@
       <DependentUpon>Step1BankReconciliation.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reports\Step1BankReconciliationAllTran.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Step1BankReconciliationAllTran.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Step1ReconciliationBank1Account1DateRange.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Step1ReconciliationBank1Account1DateRange.rpt</DependentUpon>
+    </Compile>
     <Compile Include="Reports\Step2ReconciliationAccount_nd_BankWise.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -626,6 +636,14 @@
     <EmbeddedResource Include="Reports\Step1BankReconciliation.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Step1BankReconciliation.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Step1BankReconciliationAllTran.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Step1BankReconciliationAllTran.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Step1ReconciliationBank1Account1DateRange.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Step1ReconciliationBank1Account1DateRange.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Step2ReconciliationAccount_nd_BankWise.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
