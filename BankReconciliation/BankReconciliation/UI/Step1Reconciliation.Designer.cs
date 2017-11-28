@@ -73,6 +73,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.PendingBankTransactionbutton = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -487,6 +488,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.PendingBankTransactionbutton);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.button1);
@@ -498,13 +500,27 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Step 1 Reconciliation Statements";
             // 
+            // PendingBankTransactionbutton
+            // 
+            this.PendingBankTransactionbutton.BackColor = System.Drawing.Color.Snow;
+            this.PendingBankTransactionbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PendingBankTransactionbutton.BackgroundImage")));
+            this.PendingBankTransactionbutton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PendingBankTransactionbutton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.PendingBankTransactionbutton.Location = new System.Drawing.Point(410, 41);
+            this.PendingBankTransactionbutton.Name = "PendingBankTransactionbutton";
+            this.PendingBankTransactionbutton.Size = new System.Drawing.Size(119, 49);
+            this.PendingBankTransactionbutton.TabIndex = 10;
+            this.PendingBankTransactionbutton.Text = "Pending Bank Transaction";
+            this.PendingBankTransactionbutton.UseVisualStyleBackColor = false;
+            this.PendingBankTransactionbutton.Click += new System.EventHandler(this.PendingBankTransactionbutton_Click);
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Snow;
             this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Location = new System.Drawing.Point(206, 41);
+            this.button3.Location = new System.Drawing.Point(136, 41);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(119, 49);
             this.button3.TabIndex = 9;
@@ -518,7 +534,7 @@
             this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(389, 41);
+            this.button2.Location = new System.Drawing.Point(271, 41);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(119, 49);
             this.button2.TabIndex = 8;
@@ -532,7 +548,7 @@
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(29, 41);
+            this.button1.Location = new System.Drawing.Point(6, 41);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 49);
             this.button1.TabIndex = 7;
@@ -637,5 +653,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button PendingBankTransactionbutton;
     }
 }
