@@ -62,6 +62,7 @@
             this.txtAccountNo = new System.Windows.Forms.TextBox();
             this.txtWithwrawId = new System.Windows.Forms.TextBox();
             this.newTxtStatus = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -70,8 +71,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.IndianRed;
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.debitButton);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.cmbdebitToBank);
             this.groupBox1.Controls.Add(this.label5);
@@ -96,9 +98,9 @@
             this.groupBox1.Controls.Add(this.txtWBankNameCombo);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(32, 74);
+            this.groupBox1.Location = new System.Drawing.Point(32, 66);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(626, 600);
+            this.groupBox1.Size = new System.Drawing.Size(626, 663);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Withdraw";
@@ -248,13 +250,14 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.SMRTButton);
-            this.groupBox3.Controls.Add(this.debitButton);
-            this.groupBox3.Location = new System.Drawing.Point(26, 478);
+            this.groupBox3.Location = new System.Drawing.Point(54, 510);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(575, 96);
+            this.groupBox3.Size = new System.Drawing.Size(515, 96);
             this.groupBox3.TabIndex = 63;
             this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "View And Print";
             // 
             // SMRTButton
             // 
@@ -271,12 +274,12 @@
             // debitButton
             // 
             this.debitButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.debitButton.ForeColor = System.Drawing.Color.Blue;
-            this.debitButton.Location = new System.Drawing.Point(347, 25);
+            this.debitButton.ForeColor = System.Drawing.Color.ForestGreen;
+            this.debitButton.Location = new System.Drawing.Point(399, 470);
             this.debitButton.Name = "debitButton";
-            this.debitButton.Size = new System.Drawing.Size(170, 57);
+            this.debitButton.Size = new System.Drawing.Size(170, 44);
             this.debitButton.TabIndex = 10;
-            this.debitButton.Text = "Withdraw";
+            this.debitButton.Text = "Confirm Txn";
             this.debitButton.UseVisualStyleBackColor = true;
             this.debitButton.Click += new System.EventHandler(this.debitButton_Click);
             // 
@@ -448,7 +451,7 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.IndianRed;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(18, 25);
             this.dataGridView1.Name = "dataGridView1";
@@ -457,7 +460,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.IndianRed;
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Blue;
@@ -469,7 +472,7 @@
             // 
             // txtBalance2
             // 
-            this.txtBalance2.BackColor = System.Drawing.Color.IndianRed;
+            this.txtBalance2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtBalance2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBalance2.Location = new System.Drawing.Point(-1, 685);
             this.txtBalance2.Name = "txtBalance2";
@@ -478,7 +481,7 @@
             // 
             // txtAccountNo
             // 
-            this.txtAccountNo.BackColor = System.Drawing.Color.IndianRed;
+            this.txtAccountNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtAccountNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAccountNo.Location = new System.Drawing.Point(31, 680);
             this.txtAccountNo.Name = "txtAccountNo";
@@ -488,7 +491,7 @@
             // 
             // txtWithwrawId
             // 
-            this.txtWithwrawId.BackColor = System.Drawing.Color.IndianRed;
+            this.txtWithwrawId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtWithwrawId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtWithwrawId.Location = new System.Drawing.Point(123, 681);
             this.txtWithwrawId.Name = "txtWithwrawId";
@@ -497,7 +500,7 @@
             // 
             // newTxtStatus
             // 
-            this.newTxtStatus.BackColor = System.Drawing.Color.IndianRed;
+            this.newTxtStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.newTxtStatus.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.newTxtStatus.Location = new System.Drawing.Point(150, 682);
             this.newTxtStatus.Name = "newTxtStatus";
@@ -505,12 +508,24 @@
             this.newTxtStatus.TabIndex = 9;
             this.newTxtStatus.Visible = false;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Blue;
+            this.button1.Location = new System.Drawing.Point(319, 25);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(170, 57);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Positive Pay Isntruction";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Withdraw
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.IndianRed;
-            this.ClientSize = new System.Drawing.Size(1248, 705);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.ClientSize = new System.Drawing.Size(1248, 741);
             this.Controls.Add(this.newTxtStatus);
             this.Controls.Add(this.txtWithwrawId);
             this.Controls.Add(this.txtAccountNo);
@@ -569,5 +584,6 @@
         private System.Windows.Forms.ComboBox cmbdebitToBank;
         public System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button1;
     }
 }
