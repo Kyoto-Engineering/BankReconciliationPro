@@ -166,6 +166,12 @@
       <DependentUpon>AllTransactionCrystalReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reports\LimitCreationReportUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\LimitCreationReportUI.Designer.cs">
+      <DependentUpon>LimitCreationReportUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\OneBankChequeCopy.cs">
       <DependentUpon>OneBankChequeCopy.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -290,11 +296,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Step1BankReconciliationAllTran.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\Step1ReconciliationBank1Account1DateRange.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Step1ReconciliationBank1Account1DateRange.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\Step2ReconciliationAccount_nd_BankWise.cs">
       <AutoGen>True</AutoGen>
@@ -581,6 +589,9 @@
     <EmbeddedResource Include="Reports\AllTransactionCrystalReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>AllTransactionCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LimitCreationReportUI.resx">
+      <DependentUpon>LimitCreationReportUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\OneBankChequeCopy.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
