@@ -245,6 +245,11 @@ namespace BankReconciliation.Reports
             this.Visible = true;
         }
 
+        private void BankstatementUI_Load(object sender, EventArgs e)
+        {
+
+        }
+
      //   private void BankstatementUI_Load(object sender, EventArgs e)
 //{
 

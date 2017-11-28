@@ -135,6 +135,7 @@
             this.bankSelectionComboBox.Name = "bankSelectionComboBox";
             this.bankSelectionComboBox.Size = new System.Drawing.Size(301, 21);
             this.bankSelectionComboBox.TabIndex = 4;
+            this.bankSelectionComboBox.SelectedIndexChanged += new System.EventHandler(this.bankSelectionComboBox_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -160,6 +161,7 @@
             this.button10.TabIndex = 9;
             this.button10.Text = "Get";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // AccountWiseTransaction
             // 

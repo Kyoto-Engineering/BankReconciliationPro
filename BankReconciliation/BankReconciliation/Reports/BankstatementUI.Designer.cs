@@ -193,6 +193,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "BankstatementUI";
             this.Text = "BankstatementUI";
+            this.Load += new System.EventHandler(this.BankstatementUI_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

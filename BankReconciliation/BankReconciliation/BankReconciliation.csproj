@@ -266,6 +266,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PendingTypeStep1ReconciliationAll.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\PositivePayInstruction.cs">
       <SubType>Form</SubType>
