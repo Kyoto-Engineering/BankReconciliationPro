@@ -92,7 +92,7 @@
             this.groupBox1.Location = new System.Drawing.Point(26, 75);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(606, 605);
-            this.groupBox1.TabIndex = 99;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Deposit";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -104,7 +104,7 @@
             this.comboBox1.Location = new System.Drawing.Point(269, 237);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(293, 32);
-            this.comboBox1.TabIndex = 51;
+            this.comboBox1.TabIndex = 4;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBox2
@@ -112,7 +112,7 @@
             this.textBox2.Location = new System.Drawing.Point(76, 448);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 32);
-            this.textBox2.TabIndex = 50;
+            this.textBox2.TabIndex = 9;
             // 
             // cmbCreditFromBank
             // 
@@ -208,7 +208,7 @@
             this.cmbAccountDNo.Location = new System.Drawing.Point(269, 188);
             this.cmbAccountDNo.Name = "cmbAccountDNo";
             this.cmbAccountDNo.Size = new System.Drawing.Size(293, 32);
-            this.cmbAccountDNo.TabIndex = 2;
+            this.cmbAccountDNo.TabIndex = 3;
             this.cmbAccountDNo.SelectedIndexChanged += new System.EventHandler(this.cmbAccountDNo_SelectedIndexChanged);
             // 
             // label4
@@ -238,7 +238,7 @@
             this.groupBox3.Location = new System.Drawing.Point(46, 474);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(530, 121);
-            this.groupBox3.TabIndex = 47;
+            this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             // 
             // saveButton
@@ -247,7 +247,7 @@
             this.saveButton.Location = new System.Drawing.Point(113, 40);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(114, 51);
-            this.saveButton.TabIndex = 9;
+            this.saveButton.TabIndex = 1;
             this.saveButton.Text = "Diposit";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click_1);
@@ -258,7 +258,7 @@
             this.MRTButton.Location = new System.Drawing.Point(373, 37);
             this.MRTButton.Name = "MRTButton";
             this.MRTButton.Size = new System.Drawing.Size(131, 54);
-            this.MRTButton.TabIndex = 10;
+            this.MRTButton.TabIndex = 3;
             this.MRTButton.Text = "Show  Most  Recent  Transaction";
             this.MRTButton.UseVisualStyleBackColor = true;
             this.MRTButton.Click += new System.EventHandler(this.MRTButton_Click);
@@ -268,7 +268,7 @@
             this.nextStepButton.Location = new System.Drawing.Point(8, 40);
             this.nextStepButton.Name = "nextStepButton";
             this.nextStepButton.Size = new System.Drawing.Size(90, 51);
-            this.nextStepButton.TabIndex = 44;
+            this.nextStepButton.TabIndex = 0;
             this.nextStepButton.Text = "Save";
             this.nextStepButton.UseVisualStyleBackColor = true;
             this.nextStepButton.Click += new System.EventHandler(this.nextStepButton_Click);
@@ -279,7 +279,7 @@
             this.createButton.Location = new System.Drawing.Point(243, 37);
             this.createButton.Name = "createButton";
             this.createButton.Size = new System.Drawing.Size(115, 54);
-            this.createButton.TabIndex = 43;
+            this.createButton.TabIndex = 2;
             this.createButton.Text = "Create Account";
             this.createButton.UseVisualStyleBackColor = true;
             this.createButton.Click += new System.EventHandler(this.createButton_Click);
@@ -309,7 +309,7 @@
             this.txtTransactionTypeCombo.Location = new System.Drawing.Point(269, 86);
             this.txtTransactionTypeCombo.Name = "txtTransactionTypeCombo";
             this.txtTransactionTypeCombo.Size = new System.Drawing.Size(293, 32);
-            this.txtTransactionTypeCombo.TabIndex = 3;
+            this.txtTransactionTypeCombo.TabIndex = 1;
             this.txtTransactionTypeCombo.SelectedIndexChanged += new System.EventHandler(this.txtTransactionTypeCombo_SelectedIndexChanged);
             // 
             // label1
@@ -402,7 +402,7 @@
             this.txtBankNameCombo.Location = new System.Drawing.Point(269, 142);
             this.txtBankNameCombo.Name = "txtBankNameCombo";
             this.txtBankNameCombo.Size = new System.Drawing.Size(293, 32);
-            this.txtBankNameCombo.TabIndex = 1;
+            this.txtBankNameCombo.TabIndex = 2;
             this.txtBankNameCombo.SelectedIndexChanged += new System.EventHandler(this.txtBankNameCombo_SelectedIndexChanged);
             // 
             // txtBalance
@@ -422,7 +422,7 @@
             this.groupBox2.Location = new System.Drawing.Point(647, 79);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(512, 601);
-            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Current Bank details";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
