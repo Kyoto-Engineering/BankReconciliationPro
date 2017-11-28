@@ -110,7 +110,7 @@
             // 
             this.loadButton.BackColor = System.Drawing.Color.White;
             this.loadButton.ForeColor = System.Drawing.Color.Green;
-            this.loadButton.Location = new System.Drawing.Point(281, 223);
+            this.loadButton.Location = new System.Drawing.Point(235, 193);
             this.loadButton.Margin = new System.Windows.Forms.Padding(5);
             this.loadButton.Name = "loadButton";
             this.loadButton.Size = new System.Drawing.Size(125, 37);
@@ -165,7 +165,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(509, 322);
+            this.ClientSize = new System.Drawing.Size(509, 284);
             this.Controls.Add(this.txtAccountNo2);
             this.Controls.Add(this.cmbCAccountNo);
             this.Controls.Add(this.newButton);
