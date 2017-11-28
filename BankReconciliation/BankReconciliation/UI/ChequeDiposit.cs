@@ -676,7 +676,9 @@ namespace BankReconciliation
                 label21.Location = new Point(68, 279);
                 checkNoTextBox.Location = new Point(269, 279);
                 label41.Location = new Point(105, 317);
-                particularsTextBox.Location = new Point(269, 317);
+                //particularsTextBox.Location = new Point(269, 317);
+                comboBox1.Location = new Point(269, 317);
+                particularsTextBox.Location = new Point(571, 317);
                 label51.Location = new Point(81, 364);
                 creditTextBox.Location = new Point(269, 364);
                 
@@ -700,7 +702,8 @@ namespace BankReconciliation
                 label3.Location = new Point(54, 279);
                 eftAccountNoTextBox.Location = new Point(269, 279);
                 label41.Location = new Point(105, 317);
-                particularsTextBox.Location = new Point(269, 317);
+                comboBox1.Location = new Point(269, 317);
+                particularsTextBox.Location = new Point(571, 317);
                 label51.Location = new Point(81, 364);
                 creditTextBox.Location = new Point(269, 364);
                 //cmbChequeNo.SelectedIndex = -1;
@@ -739,7 +742,8 @@ namespace BankReconciliation
                 cmbCreditFromBank.SelectedIndex = -1;
                 eftAccountNoTextBox.Clear();
                 label41.Location = new Point(105, 237);
-                particularsTextBox.Location = new Point(269, 237);
+                comboBox1.Location = new Point(269, 237);
+                particularsTextBox.Location = new Point(571, 237);
                 label51.Location = new Point(81, 279);
                 creditTextBox.Location = new Point(269, 279);
                 particularsTextBox.Focus();
