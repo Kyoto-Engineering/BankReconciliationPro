@@ -36,16 +36,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(371, 9);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(121, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 24);
+            this.label1.Size = new System.Drawing.Size(168, 31);
             this.label1.TabIndex = 3;
             this.label1.Text = "Transaction";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(79, 184);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(144, 173);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 47);
             this.button1.TabIndex = 1;
@@ -56,7 +58,8 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(79, 107);
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.button4.Location = new System.Drawing.Point(144, 99);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(128, 47);
             this.button4.TabIndex = 0;
@@ -69,7 +72,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 528);
+            this.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.ClientSize = new System.Drawing.Size(424, 281);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
