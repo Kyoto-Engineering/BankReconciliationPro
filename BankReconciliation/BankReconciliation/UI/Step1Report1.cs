@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BankReconciliation.UI
 {
-    public partial class Step1Report1 : Form
+    public partial class AccountWiseTransaction : Form
     {
-        public Step1Report1()
+        public AccountWiseTransaction()
         {
             InitializeComponent();
         }
