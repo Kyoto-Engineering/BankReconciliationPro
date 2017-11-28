@@ -60,7 +60,7 @@
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(12, 237);
+            this.button7.Location = new System.Drawing.Point(12, 162);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(158, 74);
             this.button7.TabIndex = 3;
@@ -82,12 +82,13 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(12, 162);
+            this.button2.Location = new System.Drawing.Point(12, 242);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(158, 69);
             this.button2.TabIndex = 2;
             this.button2.Text = "All Deposit Statement";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button1
@@ -118,11 +119,11 @@
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(6, 235);
+            this.button8.Location = new System.Drawing.Point(22, 165);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(188, 82);
+            this.button8.Size = new System.Drawing.Size(156, 69);
             this.button8.TabIndex = 3;
-            this.button8.Text = "All Transaction Statement (Deposit + Withdrwal) ";
+            this.button8.Text = "All Transaction Statement";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
@@ -134,7 +135,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(156, 62);
             this.button5.TabIndex = 1;
-            this.button5.Text = "Particulars Wise Payment";
+            this.button5.Text = "Particulars Wise Statement";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
@@ -146,19 +147,20 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(156, 66);
             this.button4.TabIndex = 0;
-            this.button4.Text = "Benificiary Wise Payment";
+            this.button4.Text = "Benificiary Wise Statement";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(22, 165);
+            this.button3.Location = new System.Drawing.Point(22, 245);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(156, 64);
             this.button3.TabIndex = 2;
             this.button3.Text = "All Withdrawl Statement";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // textBox1
