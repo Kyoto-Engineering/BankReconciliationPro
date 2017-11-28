@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BankReconciliation.Reports;
 
 namespace BankReconciliation.UI
 {
@@ -427,6 +428,26 @@ namespace BankReconciliation.UI
         private void button10_KeyDown(object sender, KeyEventArgs e)
         {
             textBox7_TextChanged(this, new EventArgs());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            {
+                AccountWiseTransaction f2 = new AccountWiseTransaction();
+                this.Visible = false;
+                f2.ShowDialog();
+                this.Visible = true;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            {
+                DateWiseTransaction f2 = new DateWiseTransaction();
+                this.Visible = false;
+                f2.ShowDialog();
+                this.Visible = true;
+            }
         }
     }
 }
