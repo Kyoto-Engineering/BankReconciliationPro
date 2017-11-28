@@ -41,7 +41,7 @@
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(184, 127);
+            this.backButton.Location = new System.Drawing.Point(144, 108);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(75, 23);
             this.backButton.TabIndex = 1;
@@ -53,7 +53,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 261);
+            this.ClientSize = new System.Drawing.Size(352, 261);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.textBoxk);
             this.Name = "EditDepositForm2";
