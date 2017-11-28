@@ -235,9 +235,9 @@
             this.groupBox3.Controls.Add(this.MRTButton);
             this.groupBox3.Controls.Add(this.nextStepButton);
             this.groupBox3.Controls.Add(this.createButton);
-            this.groupBox3.Location = new System.Drawing.Point(76, 474);
+            this.groupBox3.Location = new System.Drawing.Point(46, 474);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(510, 121);
+            this.groupBox3.Size = new System.Drawing.Size(530, 121);
             this.groupBox3.TabIndex = 47;
             this.groupBox3.TabStop = false;
             // 
@@ -265,9 +265,9 @@
             // 
             // nextStepButton
             // 
-            this.nextStepButton.Location = new System.Drawing.Point(6, 40);
+            this.nextStepButton.Location = new System.Drawing.Point(8, 40);
             this.nextStepButton.Name = "nextStepButton";
-            this.nextStepButton.Size = new System.Drawing.Size(90, 45);
+            this.nextStepButton.Size = new System.Drawing.Size(90, 51);
             this.nextStepButton.TabIndex = 44;
             this.nextStepButton.Text = "Save";
             this.nextStepButton.UseVisualStyleBackColor = true;
@@ -276,9 +276,9 @@
             // createButton
             // 
             this.createButton.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createButton.Location = new System.Drawing.Point(252, 42);
+            this.createButton.Location = new System.Drawing.Point(243, 37);
             this.createButton.Name = "createButton";
-            this.createButton.Size = new System.Drawing.Size(115, 49);
+            this.createButton.Size = new System.Drawing.Size(115, 54);
             this.createButton.TabIndex = 43;
             this.createButton.Text = "Create Account";
             this.createButton.UseVisualStyleBackColor = true;
@@ -365,6 +365,7 @@
             this.particularsTextBox.Name = "particularsTextBox";
             this.particularsTextBox.Size = new System.Drawing.Size(35, 32);
             this.particularsTextBox.TabIndex = 4;
+            this.particularsTextBox.Visible = false;
             // 
             // checkNoTextBox
             // 
