@@ -129,6 +129,7 @@
     <Compile Include="DbGateway\ConnectionString.cs" />
     <Compile Include="DbGateway\ConnectionGateway.cs" />
     <Compile Include="Manager\UserManager.cs" />
+    <Compile Include="Models\InputBox.cs" />
     <Compile Include="Reports\HSBCCheque.cs">
       <DependentUpon>HSBCCheque.rpt</DependentUpon>
       <AutoGen>True</AutoGen>

@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChequeDiposit));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.cmbCreditFromBank = new System.Windows.Forms.ComboBox();
             this.eftAccountNoTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -57,7 +59,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -66,6 +67,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.cmbCreditFromBank);
             this.groupBox1.Controls.Add(this.eftAccountNoTextBox);
@@ -94,6 +96,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Deposit";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(269, 237);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(293, 32);
+            this.comboBox1.TabIndex = 51;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(76, 448);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 32);
+            this.textBox2.TabIndex = 50;
             // 
             // cmbCreditFromBank
             // 
@@ -342,9 +361,9 @@
             // 
             // particularsTextBox
             // 
-            this.particularsTextBox.Location = new System.Drawing.Point(269, 237);
+            this.particularsTextBox.Location = new System.Drawing.Point(571, 237);
             this.particularsTextBox.Name = "particularsTextBox";
-            this.particularsTextBox.Size = new System.Drawing.Size(293, 32);
+            this.particularsTextBox.Size = new System.Drawing.Size(35, 32);
             this.particularsTextBox.TabIndex = 4;
             // 
             // checkNoTextBox
@@ -428,19 +447,12 @@
             this.textBox1.TabIndex = 46;
             this.textBox1.Text = "Bank Reconciliation Management";
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(76, 448);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 32);
-            this.textBox2.TabIndex = 50;
-            // 
             // ChequeDiposit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1171, 732);
+            this.ClientSize = new System.Drawing.Size(1020, 732);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.txtBalance);
@@ -492,6 +504,7 @@
         private System.Windows.Forms.TextBox eftAccountNoTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
 
     }
 }

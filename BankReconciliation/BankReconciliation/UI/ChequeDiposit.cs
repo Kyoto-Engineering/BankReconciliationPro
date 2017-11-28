@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BankReconciliation.LoginUI;
+using BankReconciliation.Models;
 using BankReconciliation.Reports;
 using BankReconciliation.UI;
 using CrystalDecisions.CrystalReports.Engine;
@@ -28,6 +29,7 @@ namespace BankReconciliation
         public string od;
         public string limitset;
         public decimal limitamount;
+        public string part;
 
         public ChequeDiposit()
         {
@@ -531,13 +533,42 @@ namespace BankReconciliation
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void getParticlrs()
+        {
+
+            try
+            {
+                con = new SqlConnection(cs.DBConn);
+                con.Open();
+                string ss = "select ParticularName from ParticularTable";
+                cmd = new SqlCommand(ss, con);
+                rdr = cmd.ExecuteReader();
+                while (rdr.Read()== true)
+                {
+                    comboBox1.Items.Add(rdr.GetString(0));
+                    
+                }
+                comboBox1.Items.Add("Not in The List");
+                
+                con.Close();
+
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+
         private void ChequeDiposit_Load(object sender, EventArgs e)
         {
             submittedBy2 = LoginForm.uId2.ToString();
 
             //FillCombo();
             GetData();
-            
+            getParticlrs();
             //con = new SqlConnection(cs.DBConn);
             //con.Open();
             //string selectQuery = "Select * from Temp_Account";
@@ -1001,5 +1032,90 @@ namespace BankReconciliation
                saveButton_Click_1(this, new EventArgs());
             }
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (comboBox1.Text == "Not in The List")
+            {
+
+                string inputParticulars = null;
+                //var inputBox = InputBox;
+                InputBox.Show("Please Input Religion Here", "Inpute Here", ref inputParticulars);
+                if (string.IsNullOrWhiteSpace(inputParticulars))
+                {
+                    comboBox1.SelectedIndex = -1;
+                }
+                else
+                {
+                    con = new SqlConnection(cs.DBConn);
+                    con.Open();
+                    string q23 = "select ParticularName from ParticularTable where ParticularName = '"+ inputParticulars +"' ";
+                    cmd = new SqlCommand(q23, con);
+                    rdr = cmd.ExecuteReader();
+                    if (rdr.Read() && !rdr.IsDBNull(0))
+                    {
+                        MessageBox.Show("This Particular Already Exists,Please Select From List", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        con.Close();
+                        comboBox1.SelectedIndex = -1;
+                    }
+                    else
+                    {
+                        try
+                        {
+                            con = new SqlConnection(cs.DBConn);
+                            con.Open();
+                            string q32 = "insert into ParticularTable (ParticularName) values (@d1)" + "SELECT CONVERT(int, SCOPE_IDENTITY())";
+                            cmd = new SqlCommand(q32, con);
+                            cmd.Parameters.AddWithValue("@d1",inputParticulars);
+                            cmd.ExecuteNonQuery();
+                            con.Close();
+                            comboBox1.Items.Clear();
+                            getParticlrs();
+                            comboBox1.SelectedText = inputParticulars;
+
+                        }
+                        catch (Exception exception)
+                        {
+                            MessageBox.Show(exception.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        }
+                    }
+                }
+
+            }
+            else
+            {
+                try
+                {
+                    con = new SqlConnection(cs.DBConn);
+                    con.Open();
+                    string q4 = "select ParticularName from ParticularTable where ParticularName = '" + comboBox1.Text + "' ";
+                    cmd = new SqlCommand(q4, con);
+                    rdr = cmd.ExecuteReader();
+
+                    if (rdr.Read())
+                    {
+
+                        particularsTextBox.Text = rdr.GetString(0);
+
+                    }
+                    con.Close();
+
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show(exception.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
+               
+            }
+
+        }
+
+     
+
+        // public object InputBox { get; set; }
     }
+
+    
 }
