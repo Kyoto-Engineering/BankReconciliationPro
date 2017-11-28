@@ -113,7 +113,7 @@
             this.textBox2.MaxLength = 50;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(307, 32);
-            this.textBox2.TabIndex = 71;
+            this.textBox2.TabIndex = 1;
             // 
             // debitButton
             // 
@@ -122,7 +122,7 @@
             this.debitButton.Location = new System.Drawing.Point(399, 470);
             this.debitButton.Name = "debitButton";
             this.debitButton.Size = new System.Drawing.Size(170, 44);
-            this.debitButton.TabIndex = 10;
+            this.debitButton.TabIndex = 11;
             this.debitButton.Text = "Confirm Txn";
             this.debitButton.UseVisualStyleBackColor = true;
             this.debitButton.Click += new System.EventHandler(this.debitButton_Click);
@@ -201,7 +201,7 @@
             this.cmbdebitToBank.Location = new System.Drawing.Point(225, 385);
             this.cmbdebitToBank.Name = "cmbdebitToBank";
             this.cmbdebitToBank.Size = new System.Drawing.Size(307, 31);
-            this.cmbdebitToBank.TabIndex = 4;
+            this.cmbdebitToBank.TabIndex = 9;
             this.cmbdebitToBank.Visible = false;
             // 
             // label5
@@ -222,7 +222,7 @@
             this.eftAccountNoWTextBox.MaxLength = 50;
             this.eftAccountNoWTextBox.Name = "eftAccountNoWTextBox";
             this.eftAccountNoWTextBox.Size = new System.Drawing.Size(307, 32);
-            this.eftAccountNoWTextBox.TabIndex = 5;
+            this.eftAccountNoWTextBox.TabIndex = 10;
             this.eftAccountNoWTextBox.Visible = false;
             this.eftAccountNoWTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.eftAccountNoWTextBox_KeyDown);
             // 
@@ -245,7 +245,7 @@
             this.cmbAccountNo.Location = new System.Drawing.Point(225, 159);
             this.cmbAccountNo.Name = "cmbAccountNo";
             this.cmbAccountNo.Size = new System.Drawing.Size(307, 31);
-            this.cmbAccountNo.TabIndex = 1;
+            this.cmbAccountNo.TabIndex = 4;
             this.cmbAccountNo.SelectedIndexChanged += new System.EventHandler(this.cmbAccountNo_SelectedIndexChanged);
             // 
             // cmbChequeNo
@@ -256,7 +256,7 @@
             this.cmbChequeNo.Location = new System.Drawing.Point(225, 342);
             this.cmbChequeNo.Name = "cmbChequeNo";
             this.cmbChequeNo.Size = new System.Drawing.Size(307, 32);
-            this.cmbChequeNo.TabIndex = 3;
+            this.cmbChequeNo.TabIndex = 8;
             this.cmbChequeNo.Visible = false;
             this.cmbChequeNo.SelectedIndexChanged += new System.EventHandler(this.cmbChequeNo_SelectedIndexChanged);
             // 
@@ -267,7 +267,7 @@
             this.groupBox3.Location = new System.Drawing.Point(54, 510);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(515, 96);
-            this.groupBox3.TabIndex = 63;
+            this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "View And Print";
             // 
@@ -278,7 +278,7 @@
             this.button1.Location = new System.Drawing.Point(319, 25);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(170, 57);
-            this.button1.TabIndex = 12;
+            this.button1.TabIndex = 1;
             this.button1.Text = "Positive Pay Isntruction";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -290,7 +290,7 @@
             this.SMRTButton.Location = new System.Drawing.Point(66, 25);
             this.SMRTButton.Name = "SMRTButton";
             this.SMRTButton.Size = new System.Drawing.Size(146, 57);
-            this.SMRTButton.TabIndex = 11;
+            this.SMRTButton.TabIndex = 0;
             this.SMRTButton.Text = "Show Most Rcent Transaction";
             this.SMRTButton.UseVisualStyleBackColor = true;
             this.SMRTButton.Click += new System.EventHandler(this.SMRTButton_Click);
@@ -303,7 +303,7 @@
             this.transactionWDateTimePicker.Location = new System.Drawing.Point(226, 16);
             this.transactionWDateTimePicker.Name = "transactionWDateTimePicker";
             this.transactionWDateTimePicker.Size = new System.Drawing.Size(307, 32);
-            this.transactionWDateTimePicker.TabIndex = 9;
+            this.transactionWDateTimePicker.TabIndex = 0;
             // 
             // label4
             // 
@@ -322,7 +322,7 @@
             this.benificiaryWTextBox.MaxLength = 150;
             this.benificiaryWTextBox.Name = "benificiaryWTextBox";
             this.benificiaryWTextBox.Size = new System.Drawing.Size(307, 32);
-            this.benificiaryWTextBox.TabIndex = 6;
+            this.benificiaryWTextBox.TabIndex = 5;
             this.benificiaryWTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.benificiaryWTextBox_KeyDown);
             // 
             // label2
@@ -404,7 +404,7 @@
             this.creditWTextBox.Name = "creditWTextBox";
             this.creditWTextBox.ShortcutsEnabled = false;
             this.creditWTextBox.Size = new System.Drawing.Size(307, 32);
-            this.creditWTextBox.TabIndex = 8;
+            this.creditWTextBox.TabIndex = 7;
             this.creditWTextBox.TextChanged += new System.EventHandler(this.creditWTextBox_TextChanged);
             this.creditWTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.creditWTextBox_KeyDown);
             this.creditWTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.creditWTextBox_KeyPress);
@@ -416,7 +416,7 @@
             this.particularsWTextBox.Location = new System.Drawing.Point(225, 249);
             this.particularsWTextBox.Name = "particularsWTextBox";
             this.particularsWTextBox.Size = new System.Drawing.Size(307, 32);
-            this.particularsWTextBox.TabIndex = 7;
+            this.particularsWTextBox.TabIndex = 6;
             this.particularsWTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.particularsWTextBox_KeyDown);
             // 
             // label21
@@ -447,7 +447,7 @@
             this.txtWBankNameCombo.Location = new System.Drawing.Point(225, 122);
             this.txtWBankNameCombo.Name = "txtWBankNameCombo";
             this.txtWBankNameCombo.Size = new System.Drawing.Size(307, 31);
-            this.txtWBankNameCombo.TabIndex = 0;
+            this.txtWBankNameCombo.TabIndex = 3;
             this.txtWBankNameCombo.SelectedIndexChanged += new System.EventHandler(this.txtWBankNameCombo_SelectedIndexChanged);
             // 
             // groupBox2
