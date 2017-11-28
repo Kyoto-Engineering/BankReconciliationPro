@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Withdraw));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.debitButton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbdebitToBank = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -39,8 +40,8 @@
             this.cmbAccountNo = new System.Windows.Forms.ComboBox();
             this.cmbChequeNo = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SMRTButton = new System.Windows.Forms.Button();
-            this.debitButton = new System.Windows.Forms.Button();
             this.transactionWDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.benificiaryWTextBox = new System.Windows.Forms.TextBox();
@@ -62,7 +63,6 @@
             this.txtAccountNo = new System.Windows.Forms.TextBox();
             this.txtWithwrawId = new System.Windows.Forms.TextBox();
             this.newTxtStatus = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -109,11 +109,23 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(222, 50);
+            this.textBox2.Location = new System.Drawing.Point(226, 50);
             this.textBox2.MaxLength = 50;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(307, 32);
             this.textBox2.TabIndex = 71;
+            // 
+            // debitButton
+            // 
+            this.debitButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.debitButton.ForeColor = System.Drawing.Color.ForestGreen;
+            this.debitButton.Location = new System.Drawing.Point(399, 470);
+            this.debitButton.Name = "debitButton";
+            this.debitButton.Size = new System.Drawing.Size(170, 44);
+            this.debitButton.TabIndex = 10;
+            this.debitButton.Text = "Confirm Txn";
+            this.debitButton.UseVisualStyleBackColor = true;
+            this.debitButton.Click += new System.EventHandler(this.debitButton_Click);
             // 
             // label6
             // 
@@ -259,6 +271,18 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "View And Print";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Blue;
+            this.button1.Location = new System.Drawing.Point(319, 25);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(170, 57);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Positive Pay Isntruction";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // SMRTButton
             // 
             this.SMRTButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -271,24 +295,12 @@
             this.SMRTButton.UseVisualStyleBackColor = true;
             this.SMRTButton.Click += new System.EventHandler(this.SMRTButton_Click);
             // 
-            // debitButton
-            // 
-            this.debitButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.debitButton.ForeColor = System.Drawing.Color.ForestGreen;
-            this.debitButton.Location = new System.Drawing.Point(399, 470);
-            this.debitButton.Name = "debitButton";
-            this.debitButton.Size = new System.Drawing.Size(170, 44);
-            this.debitButton.TabIndex = 10;
-            this.debitButton.Text = "Confirm Txn";
-            this.debitButton.UseVisualStyleBackColor = true;
-            this.debitButton.Click += new System.EventHandler(this.debitButton_Click);
-            // 
             // transactionWDateTimePicker
             // 
             this.transactionWDateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.transactionWDateTimePicker.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.transactionWDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.transactionWDateTimePicker.Location = new System.Drawing.Point(222, 16);
+            this.transactionWDateTimePicker.Location = new System.Drawing.Point(226, 16);
             this.transactionWDateTimePicker.Name = "transactionWDateTimePicker";
             this.transactionWDateTimePicker.Size = new System.Drawing.Size(307, 32);
             this.transactionWDateTimePicker.TabIndex = 9;
@@ -507,18 +519,6 @@
             this.newTxtStatus.Size = new System.Drawing.Size(42, 13);
             this.newTxtStatus.TabIndex = 9;
             this.newTxtStatus.Visible = false;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Blue;
-            this.button1.Location = new System.Drawing.Point(319, 25);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(170, 57);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Positive Pay Isntruction";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Withdraw
             // 
