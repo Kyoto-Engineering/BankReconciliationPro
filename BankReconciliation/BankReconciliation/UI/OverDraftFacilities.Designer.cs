@@ -38,18 +38,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(304, 9);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(36, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(293, 24);
+            this.label1.Size = new System.Drawing.Size(414, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Overdraft Facility Management";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(62, 99);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(65, 123);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 47);
+            this.button1.Size = new System.Drawing.Size(153, 63);
             this.button1.TabIndex = 0;
             this.button1.Text = "Create OD Account";
             this.button1.UseVisualStyleBackColor = true;
@@ -58,18 +60,20 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(62, 236);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.button2.Location = new System.Drawing.Point(65, 208);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 47);
+            this.button2.Size = new System.Drawing.Size(153, 60);
             this.button2.TabIndex = 2;
             this.button2.Text = "Edit OD Facility";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(62, 168);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.button3.Location = new System.Drawing.Point(272, 123);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(128, 47);
+            this.button3.Size = new System.Drawing.Size(163, 63);
             this.button3.TabIndex = 1;
             this.button3.Text = "Assign OD Limit";
             this.button3.UseVisualStyleBackColor = true;
@@ -78,10 +82,11 @@
             // 
             // button4
             // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.button4.ForeColor = System.Drawing.Color.DarkRed;
-            this.button4.Location = new System.Drawing.Point(62, 297);
+            this.button4.Location = new System.Drawing.Point(272, 208);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(128, 47);
+            this.button4.Size = new System.Drawing.Size(163, 60);
             this.button4.TabIndex = 3;
             this.button4.Text = "Facility Approval Sheet";
             this.button4.UseVisualStyleBackColor = true;
@@ -91,7 +96,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 528);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(532, 337);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
