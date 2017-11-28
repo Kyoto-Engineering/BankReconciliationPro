@@ -1160,6 +1160,16 @@ namespace BankReconciliation.UI
         {
             txtWTransactionTypeCombo.Focus();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            {
+                PositivePayInstruction f2 = new PositivePayInstruction();
+                this.Visible = false;
+                f2.ShowDialog();
+                this.Visible = true;
+            }
+        }
       //  private void transactionWDateTimePicker_ValueChanged(object sender, EventArgs e)
        // {
 //
