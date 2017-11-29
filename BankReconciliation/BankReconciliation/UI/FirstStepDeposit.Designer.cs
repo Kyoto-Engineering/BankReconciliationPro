@@ -113,7 +113,7 @@
             // MRTButton
             // 
             this.MRTButton.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MRTButton.Location = new System.Drawing.Point(355, 31);
+            this.MRTButton.Location = new System.Drawing.Point(355, 39);
             this.MRTButton.Name = "MRTButton";
             this.MRTButton.Size = new System.Drawing.Size(134, 54);
             this.MRTButton.TabIndex = 46;

@@ -1045,7 +1045,7 @@ namespace BankReconciliation
 
                 string inputParticulars = null;
                 //var inputBox = InputBox;
-                InputBox.Show("Please Input Religion Here", "Inpute Here", ref inputParticulars);
+                InputBox.Show("Please Input Particular", "Inpute Here", ref inputParticulars);
                 if (string.IsNullOrWhiteSpace(inputParticulars))
                 {
                     comboBox1.SelectedIndex = -1;
