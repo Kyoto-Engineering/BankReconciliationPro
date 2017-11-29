@@ -142,6 +142,11 @@ namespace BankReconciliation.UI
             this.Visible = true;
         }
 
+        private void accountNoComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
 
     }
