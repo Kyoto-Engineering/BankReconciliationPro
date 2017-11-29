@@ -929,7 +929,7 @@ namespace BankReconciliation.UI
             Tables tables = default(Tables);
             //	Table table = default(Table);
             var with1 = reportConInfo;
-            with1.ServerName = "tcp:kyotoServer,49172";
+            with1.ServerName = "LAPTOP-19NF5E9";
             with1.DatabaseName = "BankReconciliationDBProNovember";
             with1.UserID = "sa";
             with1.Password = "SystemAdministrator";
@@ -982,7 +982,7 @@ namespace BankReconciliation.UI
             Tables tables = default(Tables);
             //	Table table = default(Table);
             var with1 = reportConInfo;
-            with1.ServerName = "tcp:kyotoServer,49172";
+            with1.ServerName = "LAPTOP-19NF5E9";
             with1.DatabaseName = "BankReconciliationDBProNovember";
             with1.UserID = "sa";
             with1.Password = "SystemAdministrator";
@@ -1035,7 +1035,7 @@ namespace BankReconciliation.UI
             Tables tables = default(Tables);
             //	Table table = default(Table);
             var with1 = reportConInfo;
-            with1.ServerName = "tcp:kyotoServer,49172";
+            with1.ServerName = "LAPTOP-19NF5E9";
             with1.DatabaseName = "BankReconciliationDBProNovember";
             with1.UserID = "sa";
             with1.Password = "SystemAdministrator";
@@ -1177,7 +1177,7 @@ namespace BankReconciliation.UI
             Tables tables = default(Tables);
             //	Table table = default(Table);
             var with1 = reportConInfo;
-            with1.ServerName = "tcp:kyotoServer,49172";
+            with1.ServerName = "LAPTOP-19NF5E9";
             with1.DatabaseName = "BankReconciliationDBProNovember";
             with1.UserID = "sa";
             with1.Password = "SystemAdministrator";
@@ -1195,6 +1195,11 @@ namespace BankReconciliation.UI
             this.Visible = false;
             f2.ShowDialog();
             this.Visible = true;
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
       //  private void transactionWDateTimePicker_ValueChanged(object sender, EventArgs e)
        // {

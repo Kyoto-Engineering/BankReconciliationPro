@@ -63,6 +63,7 @@
             this.txtAccountNo = new System.Windows.Forms.TextBox();
             this.txtWithwrawId = new System.Windows.Forms.TextBox();
             this.newTxtStatus = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -130,7 +131,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(33, 55);
+            this.label6.Location = new System.Drawing.Point(15, 55);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(172, 20);
             this.label6.TabIndex = 70;
@@ -474,13 +475,13 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Blue;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.textBox1.ForeColor = System.Drawing.Color.LightYellow;
             this.textBox1.Location = new System.Drawing.Point(405, 12);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(411, 32);
+            this.textBox1.Size = new System.Drawing.Size(411, 31);
             this.textBox1.TabIndex = 5;
-            this.textBox1.Text = "Bank Reconciliation Management";
+            this.textBox1.Text = "Bank Reconciliation System";
             // 
             // txtBalance2
             // 
@@ -520,12 +521,26 @@
             this.newTxtStatus.TabIndex = 9;
             this.newTxtStatus.Visible = false;
             // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.textBox3.ForeColor = System.Drawing.Color.Violet;
+            this.textBox3.Location = new System.Drawing.Point(32, 12);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(266, 31);
+            this.textBox3.TabIndex = 10;
+            this.textBox3.Text = "Withdrawal Console";
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
             // Withdraw
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1248, 741);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.newTxtStatus);
             this.Controls.Add(this.txtWithwrawId);
             this.Controls.Add(this.txtAccountNo);
@@ -585,5 +600,6 @@
         public System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

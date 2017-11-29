@@ -58,7 +58,6 @@
             this.txtBalance = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -67,6 +66,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.saveButton);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.cmbCreditFromBank);
@@ -113,6 +113,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 32);
             this.textBox2.TabIndex = 9;
+            this.textBox2.Visible = false;
             // 
             // cmbCreditFromBank
             // 
@@ -231,31 +232,31 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.saveButton);
             this.groupBox3.Controls.Add(this.MRTButton);
             this.groupBox3.Controls.Add(this.nextStepButton);
             this.groupBox3.Controls.Add(this.createButton);
-            this.groupBox3.Location = new System.Drawing.Point(46, 474);
+            this.groupBox3.Location = new System.Drawing.Point(154, 497);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(530, 121);
+            this.groupBox3.Size = new System.Drawing.Size(216, 94);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "View and Print";
             // 
             // saveButton
             // 
             this.saveButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton.Location = new System.Drawing.Point(113, 40);
+            this.saveButton.Location = new System.Drawing.Point(435, 452);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(114, 51);
+            this.saveButton.Size = new System.Drawing.Size(127, 51);
             this.saveButton.TabIndex = 1;
-            this.saveButton.Text = "Diposit";
+            this.saveButton.Text = "Confirm Txn";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click_1);
             // 
             // MRTButton
             // 
             this.MRTButton.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MRTButton.Location = new System.Drawing.Point(373, 37);
+            this.MRTButton.Location = new System.Drawing.Point(43, 30);
             this.MRTButton.Name = "MRTButton";
             this.MRTButton.Size = new System.Drawing.Size(131, 54);
             this.MRTButton.TabIndex = 3;
@@ -265,23 +266,25 @@
             // 
             // nextStepButton
             // 
-            this.nextStepButton.Location = new System.Drawing.Point(8, 40);
+            this.nextStepButton.Location = new System.Drawing.Point(292, 32);
             this.nextStepButton.Name = "nextStepButton";
             this.nextStepButton.Size = new System.Drawing.Size(90, 51);
             this.nextStepButton.TabIndex = 0;
             this.nextStepButton.Text = "Save";
             this.nextStepButton.UseVisualStyleBackColor = true;
+            this.nextStepButton.Visible = false;
             this.nextStepButton.Click += new System.EventHandler(this.nextStepButton_Click);
             // 
             // createButton
             // 
             this.createButton.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createButton.Location = new System.Drawing.Point(243, 37);
+            this.createButton.Location = new System.Drawing.Point(171, 31);
             this.createButton.Name = "createButton";
             this.createButton.Size = new System.Drawing.Size(115, 54);
             this.createButton.TabIndex = 2;
             this.createButton.Text = "Create Account";
             this.createButton.UseVisualStyleBackColor = true;
+            this.createButton.Visible = false;
             this.createButton.Click += new System.EventHandler(this.createButton_Click);
             // 
             // label2
@@ -380,9 +383,10 @@
             // label21
             // 
             this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label21.Location = new System.Drawing.Point(68, 377);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(155, 24);
+            this.label21.Size = new System.Drawing.Size(138, 20);
             this.label21.TabIndex = 25;
             this.label21.Text = "Cheque Number";
             this.label21.Visible = false;
@@ -407,7 +411,7 @@
             // 
             // txtBalance
             // 
-            this.txtBalance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.txtBalance.BackColor = System.Drawing.Color.Gray;
             this.txtBalance.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBalance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.txtBalance.Location = new System.Drawing.Point(1, 627);
@@ -429,32 +433,19 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gray;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(16, 24);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(481, 560);
             this.dataGridView1.TabIndex = 12;
             // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Blue;
-            this.textBox1.Location = new System.Drawing.Point(380, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(411, 32);
-            this.textBox1.TabIndex = 46;
-            this.textBox1.Text = "Bank Reconciliation Management";
-            // 
             // ChequeDiposit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1020, 732);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.txtBalance);
             this.Controls.Add(this.groupBox1);
@@ -499,7 +490,6 @@
         private System.Windows.Forms.TextBox txtBalance;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button MRTButton;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox cmbAccountDNo;
         private System.Windows.Forms.ComboBox cmbCreditFromBank;
         private System.Windows.Forms.TextBox eftAccountNoTextBox;
