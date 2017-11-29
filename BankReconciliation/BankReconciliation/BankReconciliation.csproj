@@ -12,7 +12,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>E:\iqbalgit2\bars pro\</PublishUrl>
+    <PublishUrl>E:\Tanmoy\BARS Pro\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -27,7 +27,7 @@
     <MinimumRequiredVersion>1.0.0.27</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>42</ApplicationRevision>
+    <ApplicationRevision>44</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -130,6 +130,12 @@
     <Compile Include="DbGateway\ConnectionGateway.cs" />
     <Compile Include="Manager\UserManager.cs" />
     <Compile Include="Models\InputBox.cs" />
+    <Compile Include="Reports\ApprovalforLimitCreationReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ApprovalforLimitCreationReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\DateWiseTransaction.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -572,6 +578,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginUI\UserRegistrationForm.resx">
       <DependentUpon>UserRegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ApprovalforLimitCreationReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ApprovalforLimitCreationReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\DateWiseTransaction.resx">
       <DependentUpon>DateWiseTransaction.cs</DependentUpon>
