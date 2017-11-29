@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BankReconciliation.Reports;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
 
 namespace BankReconciliation.UI
 {
@@ -432,37 +434,159 @@ namespace BankReconciliation.UI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            {
-                AccountWiseTransaction f2 = new AccountWiseTransaction();
+            
+                //AccountWiseTransaction f2 = new AccountWiseTransaction();
+                //this.Visible = false;
+                //f2.ShowDialog();
+                //this.Visible = true;
+                //Step1BankReconciliationAllTran f2 = new Step1BankReconciliationAllTran();
+                //this.Visible = false;
+                //f2.ShowDialog();
+                //this.Visible = true;
+                ReportViewer f2 = new ReportViewer();
+                TableLogOnInfos reportLogonInfos = new TableLogOnInfos();
+                TableLogOnInfo reportLogonInfo = new TableLogOnInfo();
+                ConnectionInfo reportConInfo = new ConnectionInfo();
+                Tables tables = default(Tables);
+                //	Table table = default(Table);
+                var with1 = reportConInfo;
+                with1.ServerName = "tcp:kyotoServer,49172";
+                with1.DatabaseName = "BankReconciliationDBProNovember";
+                with1.UserID = "sa";
+                with1.Password = "SystemAdministrator";
+                Step1BankReconciliation cr = new Step1BankReconciliation();
+                tables = cr.Database.Tables;
+                foreach (Table table in tables)
+                {
+                    reportLogonInfo = table.LogOnInfo;
+                    reportLogonInfo.ConnectionInfo = reportConInfo;
+                    table.ApplyLogOnInfo(reportLogonInfo);
+                }
+                //f2.crystalReportViewer1.ParameterFieldInfo = paramFields;
+                //set the parameterfield information in the crystal report
+                f2.crystalReportViewer1.ReportSource = cr;
                 this.Visible = false;
                 f2.ShowDialog();
                 this.Visible = true;
-            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //{
+            //    DateWiseTransaction f2 = new DateWiseTransaction();
+            //    this.Visible = false;
+            //    f2.ShowDialog();
+            //    this.Visible = true;
+            //}
+
+            //AccountWiseTransaction f2 = new AccountWiseTransaction();
+            //this.Visible = false;
+            //f2.ShowDialog();
+            //this.Visible = true;
+            //Step1BankReconciliationAllTran f2 = new Step1BankReconciliationAllTran();
+            //this.Visible = false;
+            //f2.ShowDialog();
+            //this.Visible = true;
+            ReportViewer f2 = new ReportViewer();
+            TableLogOnInfos reportLogonInfos = new TableLogOnInfos();
+            TableLogOnInfo reportLogonInfo = new TableLogOnInfo();
+            ConnectionInfo reportConInfo = new ConnectionInfo();
+            Tables tables = default(Tables);
+            //	Table table = default(Table);
+            var with1 = reportConInfo;
+            with1.ServerName = "tcp:kyotoServer,49172";
+            with1.DatabaseName = "BankReconciliationDBProNovember";
+            with1.UserID = "sa";
+            with1.Password = "SystemAdministrator";
+            Step1ReconciliationBank1Account1DateRange cr = new Step1ReconciliationBank1Account1DateRange();
+            tables = cr.Database.Tables;
+            foreach (Table table in tables)
             {
-                DateWiseTransaction f2 = new DateWiseTransaction();
-                this.Visible = false;
-                f2.ShowDialog();
-                this.Visible = true;
+                reportLogonInfo = table.LogOnInfo;
+                reportLogonInfo.ConnectionInfo = reportConInfo;
+                table.ApplyLogOnInfo(reportLogonInfo);
             }
+            //f2.crystalReportViewer1.ParameterFieldInfo = paramFields;
+            //set the parameterfield information in the crystal report
+            f2.crystalReportViewer1.ReportSource = cr;
+            this.Visible = false;
+            f2.ShowDialog();
+            this.Visible = true;
         }
 
         private void PendingBankTransactionbutton_Click(object sender, EventArgs e)
         {
+            //{
+            //    PendingBankTxn f2 = new PendingBankTxn();
+            //    this.Visible = false;
+            //    f2.ShowDialog();
+            //    this.Visible = true;
+            //}
+
+            ReportViewer f2 = new ReportViewer();
+            TableLogOnInfos reportLogonInfos = new TableLogOnInfos();
+            TableLogOnInfo reportLogonInfo = new TableLogOnInfo();
+            ConnectionInfo reportConInfo = new ConnectionInfo();
+            Tables tables = default(Tables);
+            //	Table table = default(Table);
+            var with1 = reportConInfo;
+            with1.ServerName = "tcp:kyotoServer,49172";
+            with1.DatabaseName = "BankReconciliationDBProNovember";
+            with1.UserID = "sa";
+            with1.Password = "SystemAdministrator";
+            PendingTypeStep1ReconciliationAll cr = new PendingTypeStep1ReconciliationAll();
+            tables = cr.Database.Tables;
+            foreach (Table table in tables)
             {
-                PendingBankTxn f2 = new PendingBankTxn();
-                this.Visible = false;
-                f2.ShowDialog();
-                this.Visible = true;
+                reportLogonInfo = table.LogOnInfo;
+                reportLogonInfo.ConnectionInfo = reportConInfo;
+                table.ApplyLogOnInfo(reportLogonInfo);
             }
+            //f2.crystalReportViewer1.ParameterFieldInfo = paramFields;
+            //set the parameterfield information in the crystal report
+            f2.crystalReportViewer1.ReportSource = cr;
+            this.Visible = false;
+            f2.ShowDialog();
+            this.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            //Step1BankReconciliationAllTran f2 = new Step1BankReconciliationAllTran();
+            //this.Visible = false;
+            //f2.ShowDialog();
+            //this.Visible = true;
+            ReportViewer f2 = new ReportViewer();
+            TableLogOnInfos reportLogonInfos = new TableLogOnInfos();
+            TableLogOnInfo reportLogonInfo = new TableLogOnInfo();
+            ConnectionInfo reportConInfo = new ConnectionInfo();
+            Tables tables = default(Tables);
+            //	Table table = default(Table);
+            var with1 = reportConInfo;
+            with1.ServerName = "tcp:kyotoServer,49172";
+            with1.DatabaseName = "BankReconciliationDBProNovember";
+            with1.UserID = "sa";
+            with1.Password = "SystemAdministrator";
+            Step1BankReconciliationAllTran cr = new Step1BankReconciliationAllTran();
+            tables = cr.Database.Tables;
+            foreach (Table table in tables)
+            {
+                reportLogonInfo = table.LogOnInfo;
+                reportLogonInfo.ConnectionInfo = reportConInfo;
+                table.ApplyLogOnInfo(reportLogonInfo);
+            }
+            //f2.crystalReportViewer1.ParameterFieldInfo = paramFields;
+            //set the parameterfield information in the crystal report
+            f2.crystalReportViewer1.ReportSource = cr;
+            this.Visible = false;
+            f2.ShowDialog();
+            this.Visible = true;
         }
     }
 }

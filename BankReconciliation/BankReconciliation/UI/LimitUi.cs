@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BankReconciliation.LoginUI;
 using BankReconciliation.Reports;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
 
 namespace BankReconciliation.UI
 {
@@ -19,6 +21,7 @@ namespace BankReconciliation.UI
         private SqlCommand cmd;
         private SqlDataReader rdr;
         ConnectionString cs = new ConnectionString();
+
         public int accid, limitid;
         public LimitUi()
         {
@@ -210,12 +213,38 @@ namespace BankReconciliation.UI
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //{
+            //    LimitCreationReportUI f2 = new LimitCreationReportUI();
+            //    this.Visible = false;
+            //    f2.ShowDialog();
+            //    this.Visible = true;
+            //}
+
+            ReportViewer f2 = new ReportViewer();
+            TableLogOnInfos reportLogonInfos = new TableLogOnInfos();
+            TableLogOnInfo reportLogonInfo = new TableLogOnInfo();
+            ConnectionInfo reportConInfo = new ConnectionInfo();
+            Tables tables = default(Tables);
+            //	Table table = default(Table);
+            var with1 = reportConInfo;
+            with1.ServerName = "tcp:kyotoServer,49172";
+            with1.DatabaseName = "BankReconciliationDBProNovember";
+            with1.UserID = "sa";
+            with1.Password = "SystemAdministrator";
+            ApprovalforLimitCreationReport cr = new ApprovalforLimitCreationReport();
+            tables = cr.Database.Tables;
+            foreach (Table table in tables)
             {
-                LimitCreationReportUI f2 = new LimitCreationReportUI();
-                this.Visible = false;
-                f2.ShowDialog();
-                this.Visible = true;
+                reportLogonInfo = table.LogOnInfo;
+                reportLogonInfo.ConnectionInfo = reportConInfo;
+                table.ApplyLogOnInfo(reportLogonInfo);
             }
+            //f2.crystalReportViewer1.ParameterFieldInfo = paramFields;
+            //set the parameterfield information in the crystal report
+            f2.crystalReportViewer1.ReportSource = cr;
+            this.Visible = false;
+            f2.ShowDialog();
+            this.Visible = true;
         }
 
 
