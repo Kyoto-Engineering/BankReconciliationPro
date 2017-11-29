@@ -56,6 +56,7 @@
             this.accountNoComboBox.Name = "accountNoComboBox";
             this.accountNoComboBox.Size = new System.Drawing.Size(301, 21);
             this.accountNoComboBox.TabIndex = 6;
+            this.accountNoComboBox.SelectedIndexChanged += new System.EventHandler(this.accountNoComboBox_SelectedIndexChanged);
             // 
             // label1
             // 
